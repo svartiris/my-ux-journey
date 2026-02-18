@@ -100,3 +100,37 @@
     text-wrap: balance;
   }
 }
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  nav, .no-print {
+    display: none !important;
+  }
+
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    break-inside: avoid;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  footer {
+    break-inside: avoid;
+  }
+}
