@@ -89,52 +89,48 @@ const CaseStudies = () => {
                 className="relative"
               >
                 {/* Header row */}
-                <div
-                  className={`grid md:grid-cols-2 gap-10 items-center`}
-                >
-                  <div className={`overflow-hidden rounded-xl ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                <div>
+                  <div className="overflow-hidden rounded-xl mb-6">
                     <img
                       src={study.image}
                       alt={study.title}
-                      className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700"
+                      className="w-full h-48 md:h-56 object-cover"
                     />
                   </div>
-                  <div className={index % 2 === 1 ? "md:order-1" : ""}>
-                    <span className="font-body text-xs tracking-[0.2em] uppercase text-accent font-medium">
-                      {study.tag}
-                    </span>
-                    <h3 className="font-display text-2xl md:text-3xl text-foreground mt-3 mb-1">
-                      {study.title}
-                    </h3>
-                    <p className="font-body text-sm text-muted-foreground italic mb-4">
-                      {study.subtitle}
-                    </p>
-                    <p className="font-body text-muted-foreground leading-relaxed mb-5">
-                      {study.problem}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {study.methods.map((method) => (
-                        <span
-                          key={method}
-                          className="font-body text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground"
-                        >
-                          {method}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-5">
-                      <p className="font-body text-sm">
-                        <span className="font-medium text-primary">Impact: </span>
-                        <span className="text-foreground">{study.outcome}</span>
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => setExpandedId(isExpanded ? null : study.id)}
-                      className="font-body text-sm font-medium text-primary hover:text-primary/80 transition-colors no-print"
-                    >
-                      {isExpanded ? "Show less ↑" : "Read full case study →"}
-                    </button>
+                  <span className="font-body text-xs tracking-[0.2em] uppercase text-accent font-medium">
+                    {study.tag}
+                  </span>
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground mt-3 mb-1">
+                    {study.title}
+                  </h3>
+                  <p className="font-body text-sm text-muted-foreground italic mb-4">
+                    {study.subtitle}
+                  </p>
+                  <p className="font-body text-muted-foreground leading-relaxed mb-5">
+                    {study.problem}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {study.methods.map((method) => (
+                      <span
+                        key={method}
+                        className="font-body text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground"
+                      >
+                        {method}
+                      </span>
+                    ))}
                   </div>
+                  <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-5">
+                    <p className="font-body text-sm">
+                      <span className="font-medium text-primary">Impact: </span>
+                      <span className="text-foreground">{study.outcome}</span>
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setExpandedId(isExpanded ? null : study.id)}
+                    className="font-body text-sm font-medium text-primary transition-colors no-print"
+                  >
+                    {isExpanded ? "Show less ↑" : "Read full case study →"}
+                  </button>
                 </div>
 
                 {/* Expanded detail */}
