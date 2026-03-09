@@ -1,42 +1,43 @@
 import { useState } from "react";
-import caseStudyMobile from "@/assets/case-study-mobile.jpg";
+import caseStudyCheckoutFlow from "@/assets/case-study-checkout-flow.png";
+import caseStudyShorterCheckout from "@/assets/case-study-shorter-checkout.png";
 import caseStudyReport from "@/assets/case-study-report.jpg";
 import caseStudyConversion from "@/assets/case-study-conversion.jpg";
 
 const caseStudies = [
   {
     id: 1,
-    tag: "Conversion Optimization · G2A.com",
+    tag: "Conversion Optimization · Multivariate Testing · G2A.com",
     title: "Order Fee Optimization",
     subtitle: "Changing the financial model through multivariate testing",
-    problem: "Users felt confused and distrustful during checkout due to unclear pricing and an unexpected upsell, making them feel misled. The business wanted to maintain revenue while improving pricing transparency.",
-    role: "Led end-to-end as Research Project Manager — defined methodology, hypotheses, KPIs, conducted analysis, and delivered financial reports and actionable recommendations to cross-department teams.",
+    problem: "Users felt confused and distrustful during checkout due to unclear pricing and an unexpected upsell, making them feel misled. The business wanted to maintain revenue while removing the upsell and improving pricing transparency.",
+    role: "Owned the core of the project and led cross-department teams; decided on methodology and the process, defined research hypotheses and key KPIs, conducted analysis, prepared general and financial reports, delivered actionable recommendations.",
     collaboration: ["General Manager", "Legal", "Marketing", "PM", "Business Intelligence", "IT"],
     process: "Ran 3 rounds of multivariate tests (~2 months each) on a global desktop segment, testing order fee amounts per price bracket, visual placement on checkout, price inclusion/exclusion, and Proprietary Payment Method profitability.",
     methods: ["Multivariate Testing", "A/B Testing", "Google Tag Manager", "Statistical Analysis", "Financial Reporting"],
     insight: "G2A can maintain key KPIs by increasing order fees when paired with transparent pricing and removal of the upsell product.",
     outcome: "Increased conversion rate by 1 percentage point, directly translating into significantly higher revenue. Removed the upsell product and established new fee structure.",
-    learnings: "Built an A/B test system from scratch connected to real-time database tracking. Stepped into a PM-like leadership role, highlighting the importance of balancing cross-functional leadership with focused UX Research.",
-    image: caseStudyConversion,
+    learnings: "Built an A/B test system from scratch connected to real-time database tracking. Stepped into a PM-like leadership role, highlighting the importance of balancing cross-functional leadership with a focused UX Researcher role. Needed to understand technical and legal complexities while leading a financially high-risk project.",
+    image: caseStudyCheckoutFlow,
   },
   {
     id: 2,
-    tag: "Checkout UX · G2A.com",
+    tag: "Checkout UX · A/B Testing · G2A.com",
     title: "Shorter Checkout",
     subtitle: "Simplifying a redundant checkout step to reduce drop-off",
-    problem: "Users reached an additional checkout step that felt redundant and confusing, increasing the risk of abandoning the purchase at the very end of the flow. Analytics confirmed that every extra step near the end of the journey increased exit probability.",
+    problem: "Users reached an additional checkout step that felt redundant and confusing, increasing the risk of abandoning the purchase at the very end of the flow. Analytics confirmed that every extra step near the end of the journey increased exit probability, especially when the same information was repeated across two checkout steps.",
     role: "Sole UX Researcher — defined the research goal and KPIs, set up and monitored the A/B test, analyzed behavior and conversion data, and delivered clear, actionable recommendations.",
     collaboration: ["IT", "Business Intelligence"],
     process: "Ran an A/B test measuring the impact of removing the redundant checkout step on cart conversion rate and overall purchase completion.",
     methods: ["A/B Testing", "Behavioral Analytics", "Conversion Analysis"],
     insight: "The additional checkout step, even though visually consistent, increased drop-off and did not meaningfully retain or win back clients at the end of the purchase journey.",
     outcome: "Increased cart conversion rate by 5 percentage points, directly improving purchase completion and revenue. Consolidated the flow into a single, streamlined checkout.",
-    learnings: "Even small changes at the end of the funnel can generate significant business impact when grounded in solid user-behavior data. Balancing speed and simplicity with stakeholders' comfort with existing patterns is crucial.",
-    image: caseStudyMobile,
+    learnings: "Created a habit of very detailed preparation. Conducting research is just the tip of the iceberg, where the base is in preparation regarding dev, being on the same page and expectations with business.",
+    image: caseStudyShorterCheckout,
   },
   {
     id: 3,
-    tag: "Research Leadership · G2A.com",
+    tag: "Research Leadership · Design Thinking · G2A.com",
     title: "Leading Conversion Optimisation Team",
     subtitle: "Building a research-driven experimentation practice from the ground up",
     problem: "Teams lacked a shared process to turn ideas into testable hypotheses, leading to scattered experiments, duplicated efforts, and missed opportunities to systematically improve key user journeys.",
@@ -46,12 +47,12 @@ const caseStudies = [
     methods: ["Design Thinking", "Workshop Facilitation", "A/B Testing", "Multivariate Testing", "Hypothesis Mapping", "Markov Chains"],
     insight: "A structured, research-driven conversion-optimisation practice significantly increased the volume and quality of experiments, leading to measurable improvements in key user journeys.",
     outcome: "Facilitated 92 research projects in 2 years. Highlights: AI Recommendations → 2% increase in baskets; Markov Chains model for mapping user actions; Upsell removal → 0.5pp conversion increase; multiple validated status-quo decisions that prevented unnecessary changes.",
-    learnings: "A centralised, research-driven practice built on structured workshops significantly increases experimentation quality. Iterative refinement of the process itself is as important as the individual tests.",
-    image: caseStudyReport,
+    learnings: "A centralised, research-driven conversion practice with a cross-functional team results in more business-oriented hypotheses. Some projects had blurred ownership and were processed ineffectively — focusing on prioritisation over volume is key. Iterative refinement of the process itself is as important as the individual tests.",
+    image: caseStudyConversion,
   },
   {
     id: 4,
-    tag: "Strategic Research · G2A.com",
+    tag: "Strategic Research · Survey Design · G2A.com",
     title: "Yearly User Report",
     subtitle: "Turning scattered customer data into a strategic foundation",
     problem: "The company lacked a consolidated, regularly updated understanding of its users' sociodemographics, gaming habits, and purchase behaviours, leading to decisions based on partial or outdated data.",
@@ -61,7 +62,7 @@ const caseStudies = [
     methods: ["Survey Design", "Quantitative Analysis", "Data Visualization", "Trend Analysis", "Stakeholder Presentations"],
     insight: "The report revealed clear shifts in user profiles, gaming preferences, and purchase behaviour over time, exposing previously unnoticed segments and contradictions between assumed and actual user behaviour.",
     outcome: "Adopted by management, marketing, and product as a reference for campaign targeting, product positioning, and strategic planning. Identified 3–4 key user segments with clear profiles. Highlighted statistically significant behavioural changes year-over-year.",
-    learnings: "Combining fast, scalable surveys with deep internal analytics generates far more powerful insights than either method alone. A yearly user report becomes a living document that shapes organisational memory and strengthens user-centred strategy.",
+    learnings: "Combining fast, scalable surveys with deep internal analytics generates far more powerful insights than either method alone. A yearly user report becomes a living document that shapes organisational memory. Starting earlier with clearer integration into regular planning cycles and a more workshop-focused approach could result in clearer business use.",
     image: caseStudyReport,
   },
 ];
