@@ -12,8 +12,14 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const fold = window.innerHeight;
+      setVisible(window.scrollY > fold);
+      setScrolled(window.scrollY > fold + 50);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -21,7 +27,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : ""
+        !visible ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      } ${
+        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
