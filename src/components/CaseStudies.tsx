@@ -161,6 +161,12 @@ const CaseStudies = () => {
                     />
                   </div>
 
+                  {/* Scope of Ownership */}
+                  <div className="mb-4">
+                    <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-1">Scope of Ownership</h4>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.scopeOfOwnership}</p>
+                  </div>
+
                   {/* Impact */}
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-5">
                     <p className="font-body text-sm">
