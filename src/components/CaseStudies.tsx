@@ -7,63 +7,106 @@ import caseStudyConversion from "@/assets/case-study-conversion.jpg";
 const caseStudies = [
   {
     id: 1,
-    tag: "Conversion Optimization · Multivariate Testing · G2A.com",
-    title: "Order Fee Optimization",
-    subtitle: "Changing the financial model through multivariate testing",
-    problem: "Users felt confused and distrustful during checkout due to unclear pricing and an unexpected upsell, making them feel misled. The business wanted to maintain revenue while removing the upsell and improving pricing transparency.",
-    role: "Owned the core of the project and led cross-department teams; decided on methodology and the process, defined research hypotheses and key KPIs, conducted analysis, prepared general and financial reports, delivered actionable recommendations.",
-    collaboration: ["General Manager", "Legal", "Marketing", "PM", "Business Intelligence", "IT"],
-    process: "Ran 3 rounds of multivariate tests (~2 months each) on a global desktop segment, testing order fee amounts per price bracket, visual placement on checkout, price inclusion/exclusion, and Proprietary Payment Method profitability.",
-    methods: ["Multivariate Testing", "A/B Testing", "Google Tag Manager", "Statistical Analysis", "Financial Reporting"],
-    insight: "G2A can maintain key KPIs by increasing order fees when paired with transparent pricing and removal of the upsell product.",
-    outcome: "Increased conversion rate by 1 percentage point, directly translating into significantly higher revenue. Removed the upsell product and established new fee structure.",
-    learnings: "Built an A/B test system from scratch connected to real-time database tracking. Stepped into a PM-like leadership role, highlighting the importance of balancing cross-functional leadership with a focused UX Researcher role. Needed to understand technical and legal complexities while leading a financially high-risk project.",
-    image: caseStudyCheckoutFlow,
-  },
-  {
-    id: 2,
-    tag: "Checkout UX · A/B Testing · G2A.com",
-    title: "Shorter Checkout",
-    subtitle: "Simplifying a redundant checkout step to reduce drop-off",
-    problem: "Users reached an additional checkout step that felt redundant and confusing, increasing the risk of abandoning the purchase at the very end of the flow. Analytics confirmed that every extra step near the end of the journey increased exit probability, especially when the same information was repeated across two checkout steps.",
-    role: "Sole UX Researcher — defined the research goal and KPIs, set up and monitored the A/B test, analyzed behavior and conversion data, and delivered clear, actionable recommendations.",
-    collaboration: ["IT", "Business Intelligence"],
-    process: "Ran an A/B test measuring the impact of removing the redundant checkout step on cart conversion rate and overall purchase completion.",
-    methods: ["A/B Testing", "Behavioral Analytics", "Conversion Analysis"],
-    insight: "The additional checkout step, even though visually consistent, increased drop-off and did not meaningfully retain or win back clients at the end of the purchase journey.",
-    outcome: "Increased cart conversion rate by 5 percentage points, directly improving purchase completion and revenue. Consolidated the flow into a single, streamlined checkout.",
-    learnings: "Created a habit of very detailed preparation. Conducting research is just the tip of the iceberg, where the base is in preparation regarding dev, being on the same page and expectations with business.",
-    image: caseStudyShorterCheckout,
-  },
-  {
-    id: 3,
-    tag: "Research Leadership · Design Thinking · G2A.com",
+    tags: ["Conversion Optimization", "A/B Testing", "Team Leadership", "Design Thinking Workshops", "Hypothesis Prioritization"],
     title: "Leading Conversion Optimisation Team",
-    subtitle: "Building a research-driven experimentation practice from the ground up",
-    problem: "Teams lacked a shared process to turn ideas into testable hypotheses, leading to scattered experiments, duplicated efforts, and missed opportunities to systematically improve key user journeys.",
-    role: "As UX Lead Researcher, owned the end-to-end conversion-optimisation practice — defined the process for idea generation, hypothesis framing, and prioritisation. Introduced Design Thinking workshops, managed the research backlog, and synthesised results into reusable insights.",
-    collaboration: ["UX Researchers", "UX Designers", "Product Managers", "Business", "Marketing", "Senior Leadership"],
-    process: "Applied a Design Thinking-inspired framework: ideation workshops, hypothesis-mapping sessions, KPI alignment, and single/multi-round A/B and multivariate tests co-designed by UX Research.",
-    methods: ["Design Thinking", "Workshop Facilitation", "A/B Testing", "Multivariate Testing", "Hypothesis Mapping", "Markov Chains"],
-    insight: "A structured, research-driven conversion-optimisation practice significantly increased the volume and quality of experiments, leading to measurable improvements in key user journeys.",
-    outcome: "Facilitated 92 research projects in 2 years. Highlights: AI Recommendations → 2% increase in baskets; Markov Chains model for mapping user actions; Upsell removal → 0.5pp conversion increase; multiple validated status-quo decisions that prevented unnecessary changes.",
-    learnings: "A centralised, research-driven conversion practice with a cross-functional team results in more business-oriented hypotheses. Some projects had blurred ownership and were processed ineffectively — focusing on prioritisation over volume is key. Iterative refinement of the process itself is as important as the individual tests.",
+    subtitle: "Established and led a structured conversion optimization practice as UX Lead Researcher, transforming stakeholder ideas into a pipeline of 92 research-driven experiments over 2 years.",
+    impact: "Delivered measurable KPI lifts (e.g., +2% baskets, +0.5% checkout conversion) across key journeys.",
+    scopeOfOwnership: "As UX Lead Researcher, I designed and managed the end-to-end practice: defined processes for idea generation, hypothesis framing, and prioritization; facilitated Design Thinking workshops; maintained the research backlog; oversaw study design and KPI alignment; synthesized insights into reusable recommendations and decisions.",
+    problem: {
+      businessGoal: "Develop a repeatable, centralized process for hypothesis generation, prioritization, and testing to ensure conversion initiatives relied on user research and data rather than intuition.",
+      userPain: "Teams lacked a shared space and process to turn ideas into testable hypotheses, which led to scattered experiments, duplicated efforts, and missed opportunities to systematically improve key user journeys.",
+      trigger: "Leadership recognised that despite many ad-hoc A/B tests, the organisation neither had a clear workflow nor a dedicated research-driven conversion team, which limited the impact of experimentation and long-term learning.",
+    },
+    collaboration: ["UX Researchers", "Designers", "Product Managers", "Business", "Marketing", "Senior Leadership"],
+    researchGoals: [
+      "Create a sustainable, cross-functional practice linking stakeholder input to user-centered research.",
+      "Convert qualitative and quantitative data into prioritized, testable hypotheses.",
+    ],
+    researchMethod: "Implemented a Design Thinking framework: ideation workshops (empathize, define, ideate); hypothesis mapping; KPI and test plan alignment; A/B and multivariate tests (single/multi-round); supplemented by qualitative methods (e.g., interviews, usability checks).",
+    keyInsight: "A structured, research-driven practice boosted experiment volume and quality, yielding improvements in user journeys and business KPIs.",
+    projectDecision: "Oversaw 92 projects in 2 years, including: AI product page recommendations (+2% basket increase); Markov Chains tool for on-site behavior mapping; Checkout upsell removal (+0.5 percentage point conversion lift); other tests (e.g., copy variants, FOMO displays, ratings removal) validated status quo or refined strategies.",
+    numbers: "92 projects; multiple wins (e.g., +2% baskets, +0.5% conversion) prevented misguided changes.",
+    whatWorked: "Fostered a continuous feedback loop across research, product, and business, enabling iterative workflow improvements and data-informed decisions.",
+    whatCouldBeDifferently: "Clarify ownership in select projects to avoid inefficiencies or cancellations; prioritize fewer, higher-impact initiatives over volume.",
+    keyLearnings: "Mastered Design Thinking workshop facilitation to align diverse stakeholders and generate high-quality hypotheses. Gained expertise in cross-functional project coordination, managing backlogs and timelines for 92 experiments. Learned to synthesize insights from multiple projects into strategic decisions, with a focus on effective prioritization.",
     image: caseStudyConversion,
   },
   {
-    id: 4,
-    tag: "Strategic Research · Survey Design · G2A.com",
+    id: 2,
+    tags: ["Multivariate Testing", "A/B Testing", "Research Project Management", "Financial Reporting", "Cross-Functional Leadership", "Checkout Optimization"],
+    title: "Order Fee Optimization",
+    subtitle: "Led end-to-end multivariate tests to refine the checkout financial model, optimizing order fee amounts, visuals, and flow.",
+    impact: "Increased conversion rate by 1 percentage point, supporting revenue growth while preserving margins.",
+    scopeOfOwnership: "As research project manager, I defined hypotheses, selected methodology and KPIs (e.g., conversion rate, revenue per order), conducted analysis, prepared financial reports, and delivered recommendations. Developed an A/B testing system integrated with the database for real-time metric tracking.",
+    problem: {
+      businessGoal: "Sustain revenue while eliminating the upsell and enhancing pricing transparency at checkout.",
+      userPain: "Users experienced confusion and distrust, often noting issues like unexpected total changes at checkout. This was driven by feedback highlighting unclear pricing.",
+      trigger: "Analysis of user complaints identified the upsell as a key barrier to conversion.",
+    },
+    collaboration: ["General Manager", "Legal", "Marketing", "PM", "BI", "IT"],
+    researchGoals: [
+      "Determine optimal order fee amounts by price bracket and product type to maintain revenue levels.",
+    ],
+    researchMethod: "Ran 3 rounds of multivariate tests (~2 months each) on a global desktop segment, testing order fee amounts per price bracket, visual placement on checkout, price inclusion/exclusion, and Proprietary Payment Method profitability.",
+    keyInsight: "Transparent pricing (upsell removed, fees integrated into totals) maintained KPIs and improved conversion by 1 p.p. across segments.",
+    projectDecision: "Eliminated upsell, established tiered fees (e.g., 5% for orders under €50), and displayed fees clearly within totals.",
+    numbers: "Increased conversion rate by 1 percentage point, directly translating into significantly higher revenue.",
+    whatWorked: "The custom A/B system provided real-time insights, identifying effective variants that supported substantial financial outcomes. Strong cross-team alignment facilitated implementation.",
+    whatCouldBeDifferently: "Initiate earlier stakeholder alignment and clearer task delegation (e.g., IT monitoring) to reduce timeline.",
+    keyLearnings: "Excelled in a combined PM-UX researcher role, navigating technical and legal considerations in a high-stakes project. This experience underscores the value of researcher-led project management for data-driven results, aligning with my goals in international project leadership.",
+    image: caseStudyCheckoutFlow,
+  },
+  {
+    id: 3,
+    tags: ["User Surveys", "Data Analysis", "Strategic Reporting", "Segment Profiling", "Trend Analysis"],
     title: "Yearly User Report",
-    subtitle: "Turning scattered customer data into a strategic foundation",
-    problem: "The company lacked a consolidated, regularly updated understanding of its users' sociodemographics, gaming habits, and purchase behaviours, leading to decisions based on partial or outdated data.",
-    role: "Sole Creator and Lead — defined research goals, designed the survey structure, planned rollout and sampling, conducted in-depth data analysis with correlation studies, compared results with internal analytics and previous years, and presented actionable insights to stakeholders.",
+    subtitle: "Created and led an annual user research report, synthesizing global survey data with internal analytics to inform business strategy.",
+    impact: "Identified 3–4 key segments and behavioral shifts, guiding management, marketing, and product decisions.",
+    scopeOfOwnership: "As creator and lead, I managed the end-to-end process: defined research goals and questions; designed survey structure for sociodemographics, gaming behaviors, and purchase patterns; planned global rollout, sampling, and timing; analyzed data for correlations; integrated with internal analytics and prior-year benchmarks; produced visual reports and actionable presentations.",
+    problem: {
+      businessGoal: "Provide management, marketing, and product with up-to-date, structured user insights so that strategic decisions were grounded in current customer profiles, not assumptions or outdated research.",
+      userPain: "The organization lacked a unified, regularly updated view of user sociodemographics, gaming habits, and purchase behaviors, leading to fragmented decision-making.",
+      trigger: "Leadership recognised that in a fast-changing e-commerce environment, not systematically tracking how users change over time meant missing opportunities to adapt offers, messaging, and product strategy.",
+    },
     collaboration: ["Management", "Business", "Marketing", "Data Analysts"],
-    process: "Annual global survey collecting declarative data not available in analytics tools, combined with quantitative analysis of internal behavioural data (purchase frequency, category preferences, device use). Trend-based comparisons with prior years to surface shifts.",
-    methods: ["Survey Design", "Quantitative Analysis", "Data Visualization", "Trend Analysis", "Stakeholder Presentations"],
-    insight: "The report revealed clear shifts in user profiles, gaming preferences, and purchase behaviour over time, exposing previously unnoticed segments and contradictions between assumed and actual user behaviour.",
-    outcome: "Adopted by management, marketing, and product as a reference for campaign targeting, product positioning, and strategic planning. Identified 3–4 key user segments with clear profiles. Highlighted statistically significant behavioural changes year-over-year.",
-    learnings: "Combining fast, scalable surveys with deep internal analytics generates far more powerful insights than either method alone. A yearly user report becomes a living document that shapes organisational memory. Starting earlier with clearer integration into regular planning cycles and a more workshop-focused approach could result in clearer business use.",
+    researchGoals: [
+      "Profile core users (sociodemographics, motivations, gaming habits).",
+      "Track behavioral and preference changes across segments over time.",
+      "Validate survey findings against internal analytics for enriched insights.",
+    ],
+    researchMethod: "Conducted recurring global surveys throughout the year for declarative data; performed quantitative analysis of responses combined with behavioral metrics (e.g., purchase frequency, category preferences, device usage); conducted trend comparisons with previous years.",
+    keyInsight: "The yearly user report revealed clear shifts in user profiles, gaming preferences, and purchase behaviour over time, exposing previously unnoticed segments and contradictions between assumed and actual user behaviour.",
+    projectDecision: "Management adopted for campaign targeting; marketing refined segment-specific offers; product adjusted messaging and feature priorities based on trends.",
+    numbers: "Globally representative sample; defined 3–4 segments; surfaced significant shifts.",
+    whatWorked: "Created a repeatable, yearly rhythm for user research that closed the gap between one-off analytics and long-term strategic understanding, enabling continuous learning about the user base.",
+    whatCouldBeDifferently: "Integrate report earlier into planning cycles (e.g., quarterly reviews) and incorporate workshops for broader team adoption and business application.",
+    keyLearnings: "Developed skills in combining scalable surveys with internal analytics to produce comprehensive insights beyond individual methods. Gained expertise in creating living strategic documents that build organizational memory and reinforce user-centered decision-making over time.",
     image: caseStudyReport,
+  },
+  {
+    id: 4,
+    tags: ["A/B Test", "Checkout Optimization"],
+    title: "Shorter Checkout",
+    subtitle: "Directed end-to-end A/B test as sole UX Researcher to eliminate a redundant checkout step, reducing drop-off.",
+    impact: "Increased cart conversion rate by 5 percentage points, enhancing purchase completion and revenue.",
+    scopeOfOwnership: "As sole UX Researcher, I defined research goals and KPIs (e.g., cart conversion rate, drop-off at step), configured and monitored the A/B test, analyzed behavioral and conversion data, and provided actionable recommendations to product and business stakeholders.",
+    problem: {
+      businessGoal: "Minimize losses in late checkout stages by removing an unnecessary step, while sustaining or improving conversion and revenue.",
+      userPain: "Users encountered a redundant step that repeated information, fostering confusion and abandonment risks near purchase completion.",
+      trigger: "Analytics revealed that extra steps in the journey—duplicating data from the marketplace-embedded step into the new payment gateway—increased exit rates significantly.",
+    },
+    collaboration: ["IT", "Business Intelligence"],
+    researchGoals: [
+      "Assess the effect of removing the redundant step on cart conversion rate and purchase completion.",
+    ],
+    researchMethod: "Executed a controlled A/B test (n=250k+ users), comparing the full flow (two steps) against a streamlined single-step version in the payment gateway. Tracked KPIs via integrated analytics dashboard.",
+    keyInsight: "The additional step, despite visual consistency, elevated drop-off rates and failed to retain users at journey end.",
+    projectDecision: "Removed the redundant step, consolidating into a single, streamlined checkout within the payment gateway.",
+    numbers: "Increased cart conversion rate by 5 percentage points, directly improving purchase completion and revenue.",
+    whatWorked: "Enabled rapid, data-driven decisions through close KPI monitoring and clear stakeholder alignment.",
+    whatCouldBeDifferently: "Address technical debt earlier to accelerate implementation beyond the checkout modifications.",
+    keyLearnings: "Established a practice of thorough preparation, recognizing that research success depends on upstream alignment with development, business expectations, and shared goals.",
+    image: caseStudyShorterCheckout,
   },
 ];
 
@@ -81,50 +124,49 @@ const CaseStudies = () => {
         </h2>
 
         <div className="space-y-24">
-          {caseStudies.map((study, index) => {
+          {caseStudies.map((study) => {
             const isExpanded = expandedId === study.id;
             return (
-              <article
-                key={study.id}
-                className="relative"
-              >
-                {/* Header row */}
+              <article key={study.id} className="relative">
+                {/* Short view: Tags → Title → Italic subtitle + Impact → Image */}
                 <div>
-                  <div className="overflow-hidden rounded-xl mb-6">
-                    <img
-                      src={study.image}
-                      alt={study.title}
-                      className="w-full h-48 md:h-56 object-cover"
-                    />
-                  </div>
-                  <span className="font-body text-xs tracking-[0.2em] uppercase text-accent font-medium">
-                    {study.tag}
-                  </span>
-                  <h3 className="font-display text-2xl md:text-3xl text-foreground mt-3 mb-1">
-                    {study.title}
-                  </h3>
-                  <p className="font-body text-sm text-muted-foreground italic mb-4">
-                    {study.subtitle}
-                  </p>
-                  <p className="font-body text-muted-foreground leading-relaxed mb-5">
-                    {study.problem}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {study.methods.map((method) => (
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {study.tags.map((tag) => (
                       <span
-                        key={method}
+                        key={tag}
                         className="font-body text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground"
                       >
-                        {method}
+                        {tag}
                       </span>
                     ))}
                   </div>
+
+                  {/* Title */}
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground mb-3">
+                    {study.title}
+                  </h3>
+
+                  {/* Italic subtitle + Impact */}
+                  <p className="font-body text-muted-foreground leading-relaxed italic mb-2">
+                    {study.subtitle}
+                  </p>
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-5">
                     <p className="font-body text-sm">
                       <span className="font-medium text-primary">Impact: </span>
-                      <span className="text-foreground">{study.outcome}</span>
+                      <span className="text-foreground">{study.impact}</span>
                     </p>
                   </div>
+
+                  {/* Image (smaller) */}
+                  <div className="overflow-hidden rounded-xl mb-5">
+                    <img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full max-h-40 md:max-h-48 object-cover"
+                    />
+                  </div>
+
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : study.id)}
                     className="font-body text-sm font-medium text-primary transition-colors no-print"
@@ -135,13 +177,14 @@ const CaseStudies = () => {
 
                 {/* Expanded detail */}
                 {isExpanded && (
-                  <div className="mt-10 grid md:grid-cols-3 gap-8 p-8 rounded-xl bg-muted/30 border border-border animate-fade-in-up">
+                  <div className="mt-10 space-y-8 p-8 rounded-xl bg-muted/30 border border-border animate-fade-in-up">
+                    {/* Scope of Ownership */}
                     <div>
-                      <h4 className="font-display text-lg text-foreground mb-3">My Role</h4>
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-                        {study.role}
+                      <h4 className="font-display text-lg text-foreground mb-3">Scope of Ownership</h4>
+                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                        {study.scopeOfOwnership}
                       </p>
-                      <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Collaboration</h5>
+                      <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mt-4 mb-2">Collaboration</h5>
                       <div className="flex flex-wrap gap-1.5">
                         {study.collaboration.map((c) => (
                           <span key={c} className="font-body text-xs px-2 py-1 rounded bg-background border border-border text-muted-foreground">
@@ -150,38 +193,89 @@ const CaseStudies = () => {
                         ))}
                       </div>
                     </div>
+
+                    {/* Problem & Motivation */}
                     <div>
-                      <h4 className="font-display text-lg text-foreground mb-3">Research Process</h4>
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-                        {study.process}
-                      </p>
-                      <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Key Insight</h5>
-                      <p className="font-body text-sm text-foreground leading-relaxed">
-                        {study.insight}
-                      </p>
+                      <h4 className="font-display text-lg text-foreground mb-3">Problem & Motivation</h4>
+                      <div className="space-y-2 font-body text-sm text-muted-foreground leading-relaxed">
+                        <p><span className="font-medium text-foreground">Business goal:</span> {study.problem.businessGoal}</p>
+                        <p><span className="font-medium text-foreground">User pain:</span> {study.problem.userPain}</p>
+                        <p><span className="font-medium text-foreground">Trigger:</span> {study.problem.trigger}</p>
+                      </div>
                     </div>
+
+                    {/* Research Process */}
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div>
+                        <h4 className="font-display text-lg text-foreground mb-3">Research Process</h4>
+                        <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Research Goals</h5>
+                        <ul className="list-disc list-inside font-body text-sm text-muted-foreground leading-relaxed mb-4 space-y-1">
+                          {study.researchGoals.map((goal, i) => (
+                            <li key={i}>{goal}</li>
+                          ))}
+                        </ul>
+                        <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Method</h5>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                          {study.researchMethod}
+                        </p>
+                      </div>
+
+                      {/* Outcome */}
+                      <div>
+                        <h4 className="font-display text-lg text-foreground mb-3">Outcome</h4>
+                        <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Key Insight</h5>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
+                          {study.keyInsight}
+                        </p>
+                        <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Project Decision</h5>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
+                          {study.projectDecision}
+                        </p>
+                        <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Numbers</h5>
+                        <p className="font-body text-sm text-foreground leading-relaxed font-medium">
+                          {study.numbers}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Afterthought */}
                     <div>
-                      <h4 className="font-display text-lg text-foreground mb-3">Reflections</h4>
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                        {study.learnings}
-                      </p>
+                      <h4 className="font-display text-lg text-foreground mb-3">Afterthought</h4>
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div>
+                          <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">What Worked</h5>
+                          <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.whatWorked}</p>
+                        </div>
+                        <div>
+                          <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">What Could Be Done Differently</h5>
+                          <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.whatCouldBeDifferently}</p>
+                        </div>
+                        <div>
+                          <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Key Learnings</h5>
+                          <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.keyLearnings}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
 
                 {/* Print-only expanded detail */}
-                <div className="hidden print:block mt-6 grid md:grid-cols-3 gap-6 text-sm">
+                <div className="hidden print:block mt-6 space-y-4 text-sm">
                   <div>
-                    <h4 className="font-display text-base text-foreground mb-2">My Role</h4>
-                    <p className="font-body text-muted-foreground leading-relaxed">{study.role}</p>
+                    <h4 className="font-display text-base text-foreground mb-2">Scope of Ownership</h4>
+                    <p className="font-body text-muted-foreground leading-relaxed">{study.scopeOfOwnership}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-display text-base text-foreground mb-2">Problem & Motivation</h4>
+                    <p className="font-body text-muted-foreground leading-relaxed">{study.problem.businessGoal}</p>
                   </div>
                   <div>
                     <h4 className="font-display text-base text-foreground mb-2">Process</h4>
-                    <p className="font-body text-muted-foreground leading-relaxed">{study.process}</p>
+                    <p className="font-body text-muted-foreground leading-relaxed">{study.researchMethod}</p>
                   </div>
                   <div>
                     <h4 className="font-display text-base text-foreground mb-2">Reflections</h4>
-                    <p className="font-body text-muted-foreground leading-relaxed">{study.learnings}</p>
+                    <p className="font-body text-muted-foreground leading-relaxed">{study.keyLearnings}</p>
                   </div>
                 </div>
               </article>
