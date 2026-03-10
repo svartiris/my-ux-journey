@@ -128,8 +128,13 @@ const CaseStudies = () => {
             const isExpanded = expandedId === study.id;
             return (
               <article key={study.id} className="relative">
-                {/* Short view: Tags → Title → Italic subtitle + Impact → Image */}
+                {/* Short view: Title → Tags → Italic subtitle → Image → Impact */}
                 <div>
+                  {/* Title */}
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground mb-3">
+                    {study.title}
+                  </h3>
+
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {study.tags.map((tag) => (
@@ -142,29 +147,26 @@ const CaseStudies = () => {
                     ))}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="font-display text-2xl md:text-3xl text-foreground mb-3">
-                    {study.title}
-                  </h3>
-
-                  {/* Italic subtitle + Impact */}
-                  <p className="font-body text-muted-foreground leading-relaxed italic mb-2">
+                  {/* Italic subtitle */}
+                  <p className="font-body text-muted-foreground leading-relaxed italic mb-4">
                     {study.subtitle}
                   </p>
+
+                  {/* Image (smaller) */}
+                  <div className="overflow-hidden rounded-xl mb-4">
+                    <img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full max-h-32 md:max-h-40 object-cover"
+                    />
+                  </div>
+
+                  {/* Impact */}
                   <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-5">
                     <p className="font-body text-sm">
                       <span className="font-medium text-primary">Impact: </span>
                       <span className="text-foreground">{study.impact}</span>
                     </p>
-                  </div>
-
-                  {/* Image (smaller) */}
-                  <div className="overflow-hidden rounded-xl mb-5">
-                    <img
-                      src={study.image}
-                      alt={study.title}
-                      className="w-full max-h-40 md:max-h-48 object-cover"
-                    />
                   </div>
 
                   <button
