@@ -259,6 +259,7 @@ const CaseStudies = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
                 )}
 
                 {/* Print-only expanded detail */}
