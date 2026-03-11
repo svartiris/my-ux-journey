@@ -1,6 +1,17 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const buzzwords = ["curious", "multilingual", "asking the right questions"];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % buzzwords.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -22,8 +33,14 @@ const Hero = () => {
             <br />
             <span className="text-primary">Melanie Gierszal</span>
           </h1>
-          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            and I'm asking users the right questions for 10 years.
+          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up h-8" style={{ animationDelay: "0.15s" }}>
+            and I'm{" "}
+            <span
+              key={currentIndex}
+              className="text-primary inline-block transition-all duration-500 animate-fade-in"
+            >
+              {buzzwords[currentIndex]}
+            </span>
           </p>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a href="#work" className="inline-flex items-center px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-body font-medium text-sm tracking-wide hover:opacity-90 transition-opacity no-print">
