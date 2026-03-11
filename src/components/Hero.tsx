@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const buzzwords = [
-    { text: "curious", color: "hsl(270 60% 65%)" },           // lavender
-    { text: "multilingual", color: "hsl(280 50% 60%)" },      // purple
-    { text: "asking the right questions", color: "hsl(260 55% 68%)" }, // soft violet
-    { text: "taking ownership", color: "hsl(290 45% 62%)" },  // orchid
-    { text: "a cognitive scientist", color: "hsl(255 50% 65%)" }, // periwinkle
-    { text: "an analytical mind", color: "hsl(275 55% 58%)" }, // amethyst
-    { text: "reading between the lines", color: "hsl(265 48% 63%)" }, // iris
-    { text: "taking initiative", color: "hsl(285 52% 60%)" }, // mauve
+    { text: "curious", color: "hsl(28 70% 65%)" },              // warm copper (accent)
+    { text: "multilingual", color: "hsl(187 55% 28%)" },        // teal (primary)
+    { text: "asking the right questions", color: "hsl(340 45% 55%)" }, // dusty rose
+    { text: "taking ownership", color: "hsl(45 60% 50%)" },     // golden ochre
+    { text: "a cognitive scientist", color: "hsl(160 40% 40%)" }, // sage green
+    { text: "an analytical mind", color: "hsl(15 55% 55%)" },   // terracotta
+    { text: "reading between the lines", color: "hsl(200 45% 45%)" }, // steel blue
+    { text: "taking initiative", color: "hsl(35 50% 45%)" },    // warm brown
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -42,16 +42,18 @@ const Hero = () => {
             <br />
             <span className="text-primary">Melanie Gierszal</span>
           </h1>
-          <p className="font-body text-2xl md:text-3xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up min-h-[2.5rem]" style={{ animationDelay: "0.15s" }}>
-            and I'm{" "}
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              and I'm
+            </p>
             <span
               key={currentIndex}
-              className="font-semibold inline-block transition-all duration-500 animate-fade-in"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold inline-block transition-all duration-500 animate-fade-in leading-tight"
               style={{ color: buzzwords[currentIndex].color }}
             >
               {buzzwords[currentIndex].text}
             </span>
-          </p>
+          </div>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a href="#work" className="inline-flex items-center px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-body font-medium text-sm tracking-wide hover:opacity-90 transition-opacity no-print">
               View Case Studies
