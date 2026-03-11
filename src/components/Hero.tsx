@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const buzzwords = [
-    { text: "curious", color: "hsl(28 70% 65%)" },              // warm copper (accent)
-    { text: "multilingual", color: "hsl(187 55% 28%)" },        // teal (primary)
-    { text: "asking the right questions", color: "hsl(340 45% 55%)" }, // dusty rose
-    { text: "taking ownership", color: "hsl(45 60% 50%)" },     // golden ochre
-    { text: "a cognitive scientist", color: "hsl(160 40% 40%)" }, // sage green
-    { text: "an analytical mind", color: "hsl(15 55% 55%)" },   // terracotta
-    { text: "reading between the lines", color: "hsl(200 45% 45%)" }, // steel blue
-    { text: "taking initiative", color: "hsl(35 50% 45%)" },    // warm brown
+    { text: "curious", color: "hsl(270 60% 65%)" },
+    { text: "multilingual", color: "hsl(280 50% 55%)" },
+    { text: "asking the right questions", color: "hsl(255 55% 62%)" },
+    { text: "taking ownership", color: "hsl(290 45% 58%)" },
+    { text: "a cognitive scientist", color: "hsl(265 50% 60%)" },
+    { text: "an analytical mind", color: "hsl(285 55% 52%)" },
+    { text: "reading between the lines", color: "hsl(260 48% 67%)" },
+    { text: "taking initiative", color: "hsl(275 52% 56%)" },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
