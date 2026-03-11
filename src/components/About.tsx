@@ -20,10 +20,10 @@ const About = () => {
             </h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
               <p>
-                I'm a multilingual UX Researcher based in Warsaw, Poland, with a background in Cognitive Sciences and Applied Linguistics. My work sits at the intersection of quantitative rigor and human empathy.
+                I'm a curiosity-driven UX Researcher taking ownership and initiative.
               </p>
               <p>
-                At G2A.com, I've led cross-department initiatives—from building comprehensive yearly user reports to optimizing mobile app experiences. My most recent passion is data visualization, crafting insights that are as engaging as they are actionable.
+                The passion for asking users the right questions are rooted in my background in cognitive sciences, the ability to lead between the lines - in applied linguistic studies.
               </p>
               <p>
                 I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.

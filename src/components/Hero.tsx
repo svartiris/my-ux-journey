@@ -15,15 +15,15 @@ const Hero = () => {
       <div className="container relative z-10 py-32">
         <div className="max-w-3xl">
           <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-6 animate-fade-in">
-            UX Research Portfolio
+            Hi, I'm Melanie Gierszal
           </p>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-[1.05] mb-8 animate-fade-in-up">
-            Melanie
+            Asking users
             <br />
-            <span className="text-primary">Gierszal</span>
+            <span className="text-primary">the right questions</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Baymard-certified UX Researcher with 10 years of experience turning complex user data into actionable insights that drive product decisions.
+            for 10 years.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a href="#work" className="inline-flex items-center px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-body font-medium text-sm tracking-wide hover:opacity-90 transition-opacity no-print">
