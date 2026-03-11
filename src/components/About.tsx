@@ -3,7 +3,6 @@ const About = () => {
     { number: "10+", label: "Years Experience" },
     { number: "50+", label: "Research Projects" },
     { number: "6", label: "Languages" },
-    { number: "3", label: "Countries" },
   ];
 
   return (
