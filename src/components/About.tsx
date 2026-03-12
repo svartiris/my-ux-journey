@@ -32,9 +32,9 @@ const About = () => {
           </div>
 
           <div>
-            <div className="grid grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-3 gap-4 mb-12">
               {stats.map((stat) => (
-                <div key={stat.label} className="p-6 rounded-xl bg-background border border-border">
+                <div key={stat.label} className="p-6 rounded-xl bg-background border border-border text-center">
                   <p className="font-display text-4xl text-primary mb-1">{stat.number}</p>
                   <p className="font-body text-sm text-muted-foreground">{stat.label}</p>
                 </div>
@@ -42,21 +42,21 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="font-display text-xl text-foreground mb-4">Education</h3>
-              <div className="space-y-3">
-                {[
-                  { year: "2012–2015", degree: "M.A. Cognitive Sciences", school: "University of Osnabrück" },
-                  { year: "2008–2011", degree: "B.A. Applied Linguistics", school: "Adam Mickiewicz University" },
-                  { year: "2020–2022", degree: "Intercultural Communication", school: "Poznań University of Economics" },
-                ].map((edu) => (
-                  <div key={edu.degree} className="flex gap-4 font-body text-sm">
-                    <span className="text-muted-foreground w-20 shrink-0">{edu.year}</span>
-                    <div>
-                      <p className="text-foreground font-medium">{edu.degree}</p>
-                      <p className="text-muted-foreground">{edu.school}</p>
-                    </div>
-                  </div>
-                ))}
+              <h3 className="font-display text-xl text-foreground mb-4">Degrees</h3>
+              <div className="space-y-5">
+                <div className="font-body text-sm">
+                  <p className="text-foreground font-medium">M.A. in Cognitive Science</p>
+                  <p className="text-muted-foreground">Human-Computer Interaction</p>
+                  <p className="text-muted-foreground">Cognitive Neuropsychology</p>
+                </div>
+                <div className="font-body text-sm">
+                  <p className="text-foreground font-medium">Postgraduate in Business Planning and Strategy</p>
+                </div>
+                <div className="font-body text-sm">
+                  <p className="text-foreground font-medium">B.A. in Applied Linguistics</p>
+                  <p className="text-muted-foreground">Intercultural Communication</p>
+                  <p className="text-muted-foreground">Translations</p>
+                </div>
               </div>
             </div>
           </div>
