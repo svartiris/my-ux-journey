@@ -140,9 +140,9 @@ const CaseStudies = () => {
                     {study.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="font-body text-xs px-3 py-1.5 rounded-full bg-muted text-muted-foreground"
+                        className="font-body text-xs px-2 py-1 text-accent/80 italic"
                       >
-                        {tag}
+                        #{tag}
                       </span>
                     ))}
                   </div>
