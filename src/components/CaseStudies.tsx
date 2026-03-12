@@ -33,7 +33,7 @@ const caseStudies = [
   },
   {
     id: 2,
-    tags: ["Multivariate Testing", "A/B Testing", "Research Project Management", "Financial Reporting", "Cross-Functional Leadership", "Checkout Optimization"],
+    tags: ["Multivariate Testing", "A/B Testing", "Data Analysis", "Research Project Management", "Financial Reporting", "Cross-Functional Leadership", "Checkout Optimization"],
     title: "Order Fee Optimization",
     subtitle: "Led end-to-end multivariate tests to refine the checkout financial model, optimizing order fee amounts, visuals, and flow.",
     impact: "Increased conversion rate by 1 percentage point, supporting revenue growth while preserving margins.",
