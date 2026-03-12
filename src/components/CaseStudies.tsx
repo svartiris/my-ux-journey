@@ -204,9 +204,9 @@ const CaseStudies = () => {
                         {study.scopeOfOwnership}
                       </p>
                       <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Collaboration</h5>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap gap-x-3 gap-y-1">
                         {study.collaboration.map((c) => (
-                          <span key={c} className="font-body text-xs px-2 py-1 rounded bg-background border border-border text-muted-foreground">
+                          <span key={c} className="font-body text-sm text-muted-foreground">
                             {c}
                           </span>
                         ))}
