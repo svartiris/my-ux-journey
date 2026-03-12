@@ -3,14 +3,18 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const buzzwords = [
-    { text: "curious", color: "hsl(270 60% 65%)" },
-    { text: "multilingual", color: "hsl(280 50% 55%)" },
-    { text: "asking the right questions", color: "hsl(255 55% 62%)" },
-    { text: "taking ownership", color: "hsl(290 45% 58%)" },
-    { text: "a cognitive scientist", color: "hsl(265 50% 60%)" },
-    { text: "an analytical mind", color: "hsl(285 55% 52%)" },
-    { text: "reading between the lines", color: "hsl(260 48% 67%)" },
-    { text: "taking initiative", color: "hsl(275 52% 56%)" },
+    { text: "curious.", color: "#805AD5" },
+    { text: "multilingual.", color: "#9B6ED8" },
+    { text: "asking the right questions.", color: "#7C3AED" },
+    { text: "taking ownership.", color: "#A78BFA" },
+    { text: "a cognitive scientist.", color: "#8B5CF6" },
+    { text: "an analytical mind.", color: "#6D28D9" },
+    { text: "reading between the lines.", color: "#9F7AEA" },
+    { text: "taking initiative.", color: "#7E57C2" },
+    { text: "a UX Researcher.", color: "#805AD5" },
+    { text: "committed.", color: "#9B6ED8" },
+    { text: "a project leader.", color: "#8B5CF6" },
+    { text: "proactive.", color: "#A78BFA" },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
