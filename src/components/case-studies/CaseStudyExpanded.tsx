@@ -84,7 +84,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
         {/* Screens section (checkout flows, seller perspectives) */}
         {screensGroup && screensGroup.length > 0 && (
           <div>
-            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-3">Screens</h5>
+            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-3">Screens</h5>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
               {screensGroup.map((group) =>
                 group.images.map((img) => (
