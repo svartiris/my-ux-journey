@@ -12,6 +12,7 @@ interface Props {
 
 const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
   const isReversed = index % 2 === 1;
+  const [showLightbox, setShowLightbox] = useState(false);
 
   return (
     <article className="relative">
