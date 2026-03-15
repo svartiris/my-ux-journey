@@ -63,7 +63,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
 
       {/* 3. Research Process */}
       <div>
-        <h4 className="font-display text-lg text-foreground mb-4">3. Research Process</h4>
+        <h4 className="font-display text-lg text-primary mb-4">Research Process</h4>
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <div>
             <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Research Goals</h5>
