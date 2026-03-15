@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-card">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-[1fr_auto] gap-16 items-start">
           <div>
             <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4">
               About
@@ -18,7 +18,7 @@ const About = () => {
               <br />
               <span className="text-primary italic">moves the needle</span>
             </h2>
-            <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
+            <div className="space-y-5 font-body text-muted-foreground leading-relaxed mb-10">
               <p>
                 I'm a curiosity-driven UX Researcher taking ownership and initiative.
               </p>
@@ -29,34 +29,32 @@ const About = () => {
                 I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.
               </p>
             </div>
-          </div>
 
-          <div>
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            <div className="flex flex-col gap-3 max-w-[200px]">
               {stats.map((stat) => (
-                <div key={stat.label} className="p-6 rounded-xl bg-background border border-border text-center">
-                  <p className="font-display text-4xl text-accent mb-1">{stat.number}</p>
+                <div key={stat.label} className="p-5 rounded-xl bg-background border border-border text-center">
+                  <p className="font-display text-3xl text-accent mb-1">{stat.number}</p>
                   <p className="font-body text-sm text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
             </div>
+          </div>
 
-            <div>
-              <h3 className="font-display text-xl text-primary mb-4">Degrees</h3>
-              <div className="space-y-5">
-                <div className="font-body text-sm">
-                  <p className="text-foreground font-medium">M.A. in Cognitive Science</p>
-                  <p className="text-muted-foreground">Human-Computer Interaction</p>
-                  <p className="text-muted-foreground">Cognitive Neuropsychology</p>
-                </div>
-                <div className="font-body text-sm">
-                  <p className="text-foreground font-medium">Postgraduate in Business Planning and Strategy</p>
-                </div>
-                <div className="font-body text-sm">
-                  <p className="text-foreground font-medium">B.A. in Applied Linguistics</p>
-                  <p className="text-muted-foreground">Intercultural Communication</p>
-                  <p className="text-muted-foreground">Translations</p>
-                </div>
+          <div className="md:pt-20">
+            <h3 className="font-display text-xl text-primary mb-4">Degrees</h3>
+            <div className="space-y-5">
+              <div className="font-body text-sm">
+                <p className="text-foreground font-medium">M.A. in Cognitive Science</p>
+                <p className="text-muted-foreground">Human-Computer Interaction</p>
+                <p className="text-muted-foreground">Cognitive Neuropsychology</p>
+              </div>
+              <div className="font-body text-sm">
+                <p className="text-foreground font-medium">Postgraduate in Business Planning and Strategy</p>
+              </div>
+              <div className="font-body text-sm">
+                <p className="text-foreground font-medium">B.A. in Applied Linguistics</p>
+                <p className="text-muted-foreground">Intercultural Communication</p>
+                <p className="text-muted-foreground">Translations</p>
               </div>
             </div>
           </div>
