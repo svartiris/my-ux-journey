@@ -42,7 +42,7 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="font-display text-xl text-foreground mb-4">Degrees</h3>
+              <h3 className="font-display text-xl text-primary mb-4">Degrees</h3>
               <div className="space-y-5">
                 <div className="font-body text-sm">
                   <p className="text-foreground font-medium">M.A. in Cognitive Science</p>
