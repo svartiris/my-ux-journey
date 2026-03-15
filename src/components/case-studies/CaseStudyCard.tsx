@@ -32,7 +32,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           ))}
         </div>
 
-        <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed font-medium tracking-tight mb-8">
+        <p className="font-display text-lg md:text-xl text-foreground leading-relaxed underline underline-offset-4 decoration-accent/40 mb-8">
           {study.subtitle}
         </p>
 
