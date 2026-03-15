@@ -159,7 +159,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.whatWorked}</p>
           </div>
           <div>
-            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">What Could Be Done Differently</h5>
+            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">What Could Be Done Differently</h5>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.whatCouldBeDifferently}</p>
           </div>
           <div>
