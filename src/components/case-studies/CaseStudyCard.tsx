@@ -18,7 +18,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           {study.title}
         </h3>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
+        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-3">
           {study.tags.map((tag) => (
             <span
               key={tag}
@@ -29,7 +29,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           ))}
         </div>
 
-        <p className="font-body text-muted-foreground leading-relaxed italic mb-6">
+        <p className="font-body text-base text-muted-foreground leading-relaxed italic mb-6">
           {study.subtitle}
         </p>
 
