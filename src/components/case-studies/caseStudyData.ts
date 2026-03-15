@@ -96,7 +96,7 @@ export const caseStudies: CaseStudy[] = [
     whatCouldBeDifferently: "Initiate earlier stakeholder alignment and clearer task delegation (e.g., IT monitoring) to reduce timeline.",
     keyLearnings: "Excelled in a combined PM-UX researcher role, navigating technical and legal considerations in a high-stakes project. This experience underscores the value of researcher-led project management for data-driven results, aligning with my goals in international project leadership.",
     image: caseStudyCheckoutFlow,
-    imageAspect: "square",
+    imageAspect: "landscape",
     detailImages: [
       {
         label: "Old Checkout Layout Flow",
