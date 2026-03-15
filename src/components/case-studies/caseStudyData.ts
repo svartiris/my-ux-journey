@@ -16,6 +16,9 @@ import sellerOld from "@/assets/seller-old.jpg";
 import sellerNew from "@/assets/seller-new.png";
 import challengerBank from "@/assets/case-study-challenger-bank.png";
 import challengerBankPhases from "@/assets/case-study-challenger-bank-phases.png";
+import mobileOnboarding from "@/assets/case-study-mobile-onboarding.png";
+import mobileMethodology from "@/assets/case-study-mobile-methodology.png";
+import mobileConclusions from "@/assets/case-study-mobile-conclusions.png";
 
 export interface CaseStudy {
   id: number;
