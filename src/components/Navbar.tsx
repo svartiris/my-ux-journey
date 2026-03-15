@@ -13,7 +13,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
