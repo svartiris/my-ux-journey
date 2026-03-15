@@ -243,4 +243,45 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
   },
+  {
+    id: 6,
+    tags: ["Moderated Usability Test", "Quick and Dirty", "Mobile", "Risk Mitigation", "Last-Minute Validation", "Qualitative Insights"],
+    title: "Mobile App Purchase Flow",
+    subtitle: "Led rapid moderated usability tests to validate redesigned purchase flow and onboarding, preventing a flawed launch.",
+    impact: "Blocked confusing onboarding rollout, averting potential 20-30% drop in new user retention and trust erosion (based on industry benchmarks).",
+    scopeOfOwnership: "Designed and executed moderated usability tests despite tight timelines/budget; analyzed findings, recommended blocks, and advocated for follow-up research on pricing flow.",
+    problem: {
+      businessGoal: "Introduce new onboarding feature and test redesigned purchase flow elements (search, filters, product page offers) ahead of launch.",
+      userPain: "New users faced confusion in first impressions, search findability, filters, and dynamic pricing changes, fostering distrust.",
+      trigger: "Surge in user feedback prompted intuition-driven redesign; I intervened pre-release for quick validation.",
+    },
+    collaboration: ["Product Owner (Mobile App)", "UX Designer", "IT team"],
+    researchGoals: [
+      "Validate new user onboarding for clarity and trust.",
+      "Probe redesigned purchase flow pain points: search findability, filters, and product page offers.",
+    ],
+    researchMethod: "Moderated usability tests with 5 target users (quick recruitment via network).",
+    keyInsight: "Onboarding induced confusion and distrust; purchase flow obscured pricing transparency via unexpected changes.",
+    projectDecision: "Scrapped onboarding from release; deferred pricing flow redesign for deeper research.",
+    numbers: "Testing with just 5 users surfaced critical issues (per Nielsen's 5-user rule), saving weeks of post-launch fixes.",
+    whatWorked: "Agile, 'quick & dirty' approach delivered actionable insights under constraints, proving value of researcher intervention.",
+    whatCouldBeDifferently: "Embed UX research from project kickoff, not end-stage.",
+    keyLearnings: "Agile adaptation trumps perfection in fast-paced environments—honed my skills in high-pressure validation, ideal for international product leadership.",
+    image: mobileOnboarding,
+    imageAspect: "landscape",
+    detailImages: [
+      {
+        label: "Methodology",
+        images: [
+          { src: mobileMethodology, alt: "Methodology details for moderated usability test" },
+        ],
+      },
+      {
+        label: "Onboarding Conclusions & Recommendations",
+        images: [
+          { src: mobileConclusions, alt: "Onboarding conclusions and recommendations table" },
+        ],
+      },
+    ],
+  },
 ];
