@@ -40,10 +40,10 @@ const CaseStudyExpanded = ({ study }: Props) => {
 
       {/* 2. My Role */}
       <div>
-        <h4 className="font-display text-lg text-foreground mb-4">2. My Role</h4>
+        <h4 className="font-display text-lg text-primary mb-4">My Role</h4>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Scope of Ownership</h5>
+            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Scope of Ownership</h5>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               {study.scopeOfOwnership}
             </p>
