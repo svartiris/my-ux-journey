@@ -14,6 +14,8 @@ import testGroupsTable from "@/assets/test-groups-table.png";
 import hypothesisMetrics from "@/assets/hypothesis-metrics.png";
 import sellerOld from "@/assets/seller-old.jpg";
 import sellerNew from "@/assets/seller-new.png";
+import challengerBank from "@/assets/case-study-challenger-bank.png";
+import challengerBankPhases from "@/assets/case-study-challenger-bank-phases.png";
 
 export interface CaseStudy {
   id: number;
@@ -202,5 +204,40 @@ export const caseStudies: CaseStudy[] = [
     keyLearnings: "Established a practice of thorough preparation, recognizing that research success depends on upstream alignment with development, business expectations, and shared goals.",
     image: caseStudyShorterCheckout,
     imageAspect: "portrait",
+  },
+  {
+    id: 5,
+    tags: ["Discovery Research", "Competitive Analysis", "Stakeholder Alignment", "Product Strategy", "Cross-Functional Collaboration", "Fintech Innovation"],
+    title: "First Steps of a New Challenger Bank",
+    subtitle: "Led UX research discovery for a new challenger bank app targeting young users and small businesses, defining niche, USP, and business model.",
+    impact: "Enabled progression to planning phase, culminating in the launch of ZEN.COM as a standalone venture.",
+    scopeOfOwnership: "As UX Researcher in the R&D department, I spearheaded the discovery phase, synthesizing desk research, competitive analysis, user interviews, surveys, and moderated usability tests to define product viability. Delivered comprehensive research summary with personal and business feature lists, wireframes, monetization strategies, niches, personas and USPs.",
+    problem: {
+      businessGoal: "Launch a competitive challenger bank for personal and business users in the European market.",
+      userPain: "Young users and small business owners lacked seamless banking apps with intuitive experiences.",
+      trigger: "Rapid emergence of challenger banks across Europe signaled market opportunity.",
+    },
+    collaboration: ["CEO", "Product Owner", "UX Designer", "Market Researcher", "Business Analyst"],
+    researchGoals: [
+      "Identify niche and unique selling propositions (USPs) for differentiation.",
+      "Validate early business model and monetization paths.",
+    ],
+    researchMethod: "Desk research, competitive benchmarking, user interviews and surveys with target segments.",
+    keyInsight: "Two viable niches (young users and SME) emerged with tailored USPs, alongside feature priorities, wireframes, and monetization models for scalability.",
+    projectDecision: "Advanced to planning phase; initiative spun out as independent entity ZEN.COM.",
+    numbers: "Discovery research directly propelled project from ideation to structured planning and commercialization.",
+    whatWorked: "Fast-paced, in-person cross-functional collaboration accelerated insights, outperforming remote dynamics from prior experience.",
+    whatCouldBeDifferently: "Clearer role definitions and aligned visions among business stakeholders upfront to minimize confusion and delays.",
+    keyLearnings: "Excelled in bridging UX research with strategic product decisions in fintech, reinforcing my strength in leading high-uncertainty discovery for international ventures.",
+    image: challengerBank,
+    imageAspect: "landscape",
+    detailImages: [
+      {
+        label: "Project Phases",
+        images: [
+          { src: challengerBankPhases, alt: "Project phases from brief to implementation with actions and outcomes" },
+        ],
+      },
+    ],
   },
 ];
