@@ -7,7 +7,7 @@ const CaseStudies = () => {
 
   return (
     <section id="work" className="py-24 md:py-32">
-      <div className="container max-w-4xl">
+      <div className="container">
         <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4">
           Selected Work
         </p>
