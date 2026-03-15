@@ -49,11 +49,11 @@ const CaseStudyExpanded = ({ study }: Props) => {
             </p>
           </div>
           <div>
-            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Collaboration</h5>
-            <div className="flex flex-wrap gap-2">
-              {study.collaboration.map((c) => (
-                <span key={c} className="font-body text-xs px-3 py-1.5 rounded-lg bg-background border border-border text-muted-foreground">
-                  {c}
+            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Collaboration</h5>
+            <div className="flex flex-wrap gap-x-3 gap-y-1">
+              {study.collaboration.map((c, i) => (
+                <span key={c} className="font-body text-sm text-muted-foreground">
+                  {c}{i < study.collaboration.length - 1 ? "," : ""}
                 </span>
               ))}
             </div>
