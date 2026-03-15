@@ -66,7 +66,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
         <h4 className="font-display text-lg text-primary mb-4">Research Process</h4>
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Research Goals</h5>
+            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Research Goals</h5>
             <ul className="list-disc list-inside font-body text-sm text-muted-foreground leading-relaxed space-y-1">
               {study.researchGoals.map((goal, i) => (
                 <li key={i}>{goal}</li>
