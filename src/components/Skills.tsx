@@ -5,7 +5,8 @@ import ImageLightbox from "./case-studies/ImageLightbox";
 import certBaymard from "@/assets/cert-baymard-ux-professional.png";
 import certUsabilityTesting from "@/assets/cert-conducting-usability-testing.jpeg";
 import certUserMethods from "@/assets/cert-user-methods.jpeg";
-import certProductAnalytics from "@/assets/cert-product-analytics.png";
+import certProductAnalytics1 from "@/assets/cert-product-analytics-1.png";
+import certProductAnalytics2 from "@/assets/cert-product-analytics-2.png";
 import certUxStrategy from "@/assets/cert-ux-strategy.png";
 
 const researchMethods = [
@@ -46,14 +47,14 @@ const languages = [
 type CertType = {
   name: string;
   issuer: string;
-  image?: string;
+  image?: string | string[];
   pdf?: string;
   inProgress?: boolean;
 };
 
 const certificates: CertType[] = [
   { name: "UX Professional", issuer: "Baymard", image: certBaymard },
-  { name: "Product Analytics", issuer: "Witflow", image: certProductAnalytics },
+  { name: "Product Analytics", issuer: "Witflow", image: [certProductAnalytics1, certProductAnalytics2] },
   { name: "UX Strategy Fundamentals", issuer: "Joe Natoli", image: certUxStrategy },
   { name: "Conducting Usability Testing", issuer: "Interaction Design Foundation", image: certUsabilityTesting },
   { name: "User Methods and Best Practices", issuer: "Interaction Design Foundation", image: certUserMethods },
@@ -63,9 +64,8 @@ const certificates: CertType[] = [
 
 const Skills = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxSrc, setLightboxSrc] = useState("");
+  const [lightboxSrc, setLightboxSrc] = useState<string | string[]>("");
   const [lightboxAlt, setLightboxAlt] = useState("");
-
   const openCert = (cert: CertType) => {
     if (cert.image) {
       setLightboxSrc(cert.image);
