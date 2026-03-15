@@ -1,3 +1,11 @@
+import { useState } from "react";
+import { ExternalLink } from "lucide-react";
+import ImageLightbox from "./case-studies/ImageLightbox";
+
+import certBaymard from "@/assets/cert-baymard-ux-professional.png";
+import certUsabilityTesting from "@/assets/cert-conducting-usability-testing.jpeg";
+import certUserMethods from "@/assets/cert-user-methods.jpeg";
+
 const researchMethods = [
   "A/B & Multivariate Testing",
   "Moderated Usability Testing",
@@ -33,15 +41,39 @@ const languages = [
   { name: "Russian", level: "Basic" },
 ];
 
-const certificates = [
-  { name: "UX Professional", issuer: "Baymard" },
-  { name: "Product Analytics", issuer: "Witflow" },
-  { name: "UX Strategy Fundamentals", issuer: "Joe Natoli" },
-  { name: "Conducting Usability Testing", issuer: "Interaction Design Foundation" },
-  { name: "User Methods and Best Practices", issuer: "Interaction Design Foundation" },
+type CertType = {
+  name: string;
+  issuer: string;
+  image?: string;
+  pdf?: string;
+  inProgress?: boolean;
+};
+
+const certificates: CertType[] = [
+  { name: "UX Professional", issuer: "Baymard", image: certBaymard },
+  { name: "Product Analytics", issuer: "Witflow", pdf: "/certs/cert-product-analytics.pdf" },
+  { name: "UX Strategy Fundamentals", issuer: "Joe Natoli", pdf: "/certs/cert-ux-strategy.pdf" },
+  { name: "Conducting Usability Testing", issuer: "Interaction Design Foundation", image: certUsabilityTesting },
+  { name: "User Methods and Best Practices", issuer: "Interaction Design Foundation", image: certUserMethods },
+  { name: "Master Design Thinking", issuer: "Julia Lettinger", inProgress: true },
+  { name: "PSPO1", issuer: "Scrum.org", inProgress: true },
 ];
 
 const Skills = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxSrc, setLightboxSrc] = useState("");
+  const [lightboxAlt, setLightboxAlt] = useState("");
+
+  const openCert = (cert: CertType) => {
+    if (cert.image) {
+      setLightboxSrc(cert.image);
+      setLightboxAlt(`${cert.name} - ${cert.issuer}`);
+      setLightboxOpen(true);
+    } else if (cert.pdf) {
+      window.open(cert.pdf, "_blank");
+    }
+  };
+
   return (
     <section id="skills" className="py-24 md:py-32 bg-card">
       <div className="container">
@@ -54,7 +86,7 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <h3 className="font-display text-xl text-foreground mb-6">Research Methods</h3>
+            <h3 className="font-display text-xl text-primary mb-6">Research Methods</h3>
             <ul className="space-y-3">
               {researchMethods.map((method) => (
                 <li key={method} className="font-body text-sm text-muted-foreground flex items-start gap-3">
@@ -66,7 +98,7 @@ const Skills = () => {
           </div>
 
           <div>
-            <h3 className="font-display text-xl text-foreground mb-6">Tools</h3>
+            <h3 className="font-display text-xl text-primary mb-6">Tools</h3>
             <div className="flex flex-wrap gap-2">
               {tools.map((tool) => (
                 <span
@@ -80,19 +112,35 @@ const Skills = () => {
           </div>
 
           <div>
-            <h3 className="font-display text-xl text-foreground mb-6">Certificates</h3>
+            <h3 className="font-display text-xl text-primary mb-6">Certificates</h3>
             <div className="space-y-4">
               {certificates.map((cert) => (
-                <div key={cert.name} className="font-body text-sm">
-                  <p className="text-foreground">{cert.name}</p>
-                  <p className="text-muted-foreground text-xs">{cert.issuer}</p>
+                <div key={cert.name} className="font-body text-sm flex items-start justify-between gap-2">
+                  <div>
+                    <p className="text-foreground">
+                      {cert.name}
+                      {cert.inProgress && (
+                        <span className="text-xs text-muted-foreground ml-1.5 italic">(in progress)</span>
+                      )}
+                    </p>
+                    <p className="text-muted-foreground text-xs">{cert.issuer}</p>
+                  </div>
+                  {(cert.image || cert.pdf) && (
+                    <button
+                      onClick={() => openCert(cert)}
+                      className="shrink-0 mt-0.5 text-primary hover:text-accent transition-colors"
+                      aria-label={`View ${cert.name} certificate`}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="font-display text-xl text-foreground mb-6">Languages</h3>
+            <h3 className="font-display text-xl text-primary mb-6">Languages</h3>
             <div className="space-y-4">
               {languages.map((lang) => (
                 <div key={lang.name} className="flex justify-between items-center font-body text-sm">
@@ -106,6 +154,13 @@ const Skills = () => {
           </div>
         </div>
       </div>
+
+      <ImageLightbox
+        src={lightboxSrc}
+        alt={lightboxAlt}
+        open={lightboxOpen}
+        onOpenChange={setLightboxOpen}
+      />
     </section>
   );
 };
