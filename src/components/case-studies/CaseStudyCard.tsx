@@ -10,20 +10,6 @@ interface Props {
   index: number;
 }
 
-/**
- * Each case study gets a unique visual emphasis for its subtitle:
- *   0 (Leading COT): large quote-style with left border
- *   1 (Order Fee): highlighted background pill
- *   2 (Yearly Report): serif italic with accent underline
- *   3 (Shorter Checkout): bold with primary color drop-cap effect
- */
-const subtitleStyles: Record<number, string> = {
-  0: "font-body text-lg md:text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-5 italic",
-  1: "font-body text-lg md:text-xl text-foreground leading-relaxed bg-accent/10 rounded-lg px-5 py-3",
-  2: "font-display text-lg md:text-xl text-muted-foreground leading-relaxed underline decoration-accent/40 decoration-2 underline-offset-4",
-  3: "font-body text-lg md:text-xl text-muted-foreground leading-relaxed font-medium tracking-tight",
-};
-
 const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
   const isReversed = index % 2 === 1;
   const [showLightbox, setShowLightbox] = useState(false);
@@ -46,23 +32,23 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           ))}
         </div>
 
-        <p className={`${subtitleStyles[index] || subtitleStyles[0]} mb-8`}>
+        <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed font-medium tracking-tight mb-8">
           {study.subtitle}
         </p>
 
-        {/* Case study 1 (no image): scope + impact side by side */}
+        {/* Case study 1 (no image): scope + impact side by side, equal height */}
         {study.id === 1 ? (
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
+            <div className="p-4 rounded-lg bg-background border border-border flex flex-col">
               <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
                 Scope of Ownership
               </h4>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">
                 {study.scopeOfOwnership}
               </p>
             </div>
-            <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 self-start">
-              <p className="font-body text-sm">
+            <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex flex-col">
+              <p className="font-body text-sm flex-1">
                 <span className="font-medium text-primary">Impact: </span>
                 <span className="text-foreground">{study.impact}</span>
               </p>
@@ -70,9 +56,9 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           </div>
         ) : (
           <>
-            {/* Image + Scope side by side, image sized to match scope height */}
+            {/* Image + Scope side by side */}
             <div className={`flex flex-col md:flex-row gap-8 mb-6 ${isReversed ? "md:flex-row-reverse" : ""}`}>
-              <div className={`md:w-1/2 flex flex-col justify-center ${isReversed ? "md:text-right" : ""}`}>
+              <div className={`md:w-1/2 flex flex-col justify-center ${isReversed ? "md:text-right" : "md:text-left"}`}>
                 <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
                   Scope of Ownership
                 </h4>
