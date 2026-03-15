@@ -1,4 +1,4 @@
-import caseStudyCheckoutFlow from "@/assets/case-study-checkout-flow.png";
+import caseStudyCheckoutFlow from "@/assets/case-study-checkout-flow-new.jpeg";
 import caseStudyShorterCheckout from "@/assets/case-study-shorter-checkout.png";
 import caseStudyReport from "@/assets/case-study-user-report-map.png";
 import userReportToc1 from "@/assets/user-report-toc-1.png";
