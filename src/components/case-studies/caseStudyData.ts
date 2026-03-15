@@ -1,6 +1,8 @@
 import caseStudyCheckoutFlow from "@/assets/case-study-checkout-flow.png";
 import caseStudyShorterCheckout from "@/assets/case-study-shorter-checkout.png";
-import caseStudyReport from "@/assets/case-study-report.jpg";
+import caseStudyReport from "@/assets/case-study-user-report-map.png";
+import userReportToc1 from "@/assets/user-report-toc-1.png";
+import userReportToc2 from "@/assets/user-report-toc-2.png";
 import caseStudyConversion from "@/assets/case-study-conversion.jpg";
 import checkoutOld1 from "@/assets/checkout-old-1.png";
 import checkoutOld2 from "@/assets/checkout-old-2.png";
@@ -165,6 +167,15 @@ export const caseStudies: CaseStudy[] = [
     keyLearnings: "Developed skills in combining scalable surveys with internal analytics to produce comprehensive insights beyond individual methods. Gained expertise in creating living strategic documents that build organizational memory and reinforce user-centered decision-making over time.",
     image: caseStudyReport,
     imageAspect: "landscape",
+    detailImages: [
+      {
+        label: "Screens",
+        images: [
+          { src: userReportToc1, alt: "Report table of contents – part 1" },
+          { src: userReportToc2, alt: "Report table of contents – part 2" },
+        ],
+      },
+    ],
   },
   {
     id: 4,

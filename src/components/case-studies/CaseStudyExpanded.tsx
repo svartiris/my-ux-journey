@@ -9,12 +9,13 @@ interface Props {
 const CaseStudyExpanded = ({ study }: Props) => {
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
 
-  // Separate "Screens" images from other detail images for Order Fee case study
+  // Separate "Screens" groups from other detail images
+  const orderFeeScreenLabels = ["Old Checkout Layout Flow", "New Checkout Layout Flow", "Seller Perspective Old Layout", "Seller Perspective New Layout"];
   const screensGroup = study.detailImages?.filter(g =>
-    ["Old Checkout Layout Flow", "New Checkout Layout Flow", "Seller Perspective Old Layout", "Seller Perspective New Layout"].includes(g.label)
+    g.label === "Screens" || orderFeeScreenLabels.includes(g.label)
   );
   const otherDetailImages = study.detailImages?.filter(g =>
-    !["Old Checkout Layout Flow", "New Checkout Layout Flow", "Seller Perspective Old Layout", "Seller Perspective New Layout"].includes(g.label)
+    g.label !== "Screens" && !orderFeeScreenLabels.includes(g.label)
   );
 
   return (
