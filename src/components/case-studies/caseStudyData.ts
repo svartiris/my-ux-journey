@@ -14,6 +14,8 @@ import testGroupsTable from "@/assets/test-groups-table.png";
 import hypothesisMetrics from "@/assets/hypothesis-metrics.png";
 import sellerOld from "@/assets/seller-old.jpg";
 import sellerNew from "@/assets/seller-new.png";
+import challengerBank from "@/assets/case-study-challenger-bank.png";
+import challengerBankPhases from "@/assets/case-study-challenger-bank-phases.png";
 
 export interface CaseStudy {
   id: number;

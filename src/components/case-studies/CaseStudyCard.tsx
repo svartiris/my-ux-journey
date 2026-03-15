@@ -58,7 +58,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           <>
             {/* Image + Scope side by side */}
             <div className={`flex flex-col md:flex-row gap-8 mb-6 ${isReversed ? "md:flex-row-reverse" : ""}`}>
-              <div className={`md:w-1/2 flex flex-col justify-center ${isReversed ? "md:text-right" : "md:text-left"}`}>
+              <div className={`md:w-1/2 flex flex-col justify-center ${isReversed ? "md:text-left" : "md:text-right"}`}>
                 <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
                   Scope of Ownership
                 </h4>
