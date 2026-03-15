@@ -18,7 +18,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           {study.title}
         </h3>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
+        <div className="flex flex-wrap gap-x-3 gap-y-1 mb-3">
           {study.tags.map((tag) => (
             <span
               key={tag}
@@ -29,7 +29,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           ))}
         </div>
 
-        <p className="font-body text-muted-foreground leading-relaxed italic mb-6">
+        <p className="font-body text-base text-muted-foreground leading-relaxed italic mb-6">
           {study.subtitle}
         </p>
 
@@ -42,8 +42,8 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
               className="w-full h-auto object-contain"
             />
           </div>
-          <div className="md:w-[40%] flex flex-col justify-center">
-            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">
+          <div className={`md:w-[40%] flex flex-col justify-center ${isReversed ? "md:text-right" : ""}`}>
+            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
               Scope of Ownership
             </h4>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">

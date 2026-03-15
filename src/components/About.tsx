@@ -35,7 +35,7 @@ const About = () => {
             <div className="grid grid-cols-3 gap-4 mb-12">
               {stats.map((stat) => (
                 <div key={stat.label} className="p-6 rounded-xl bg-background border border-border text-center">
-                  <p className="font-display text-4xl text-primary mb-1">{stat.number}</p>
+                  <p className="font-display text-4xl text-accent mb-1">{stat.number}</p>
                   <p className="font-body text-sm text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
