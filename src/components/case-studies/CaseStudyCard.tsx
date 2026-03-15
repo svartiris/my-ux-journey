@@ -5,15 +5,11 @@ interface Props {
   study: CaseStudy;
   isExpanded: boolean;
   onToggle: () => void;
+  index: number;
 }
 
-const CaseStudyCard = ({ study, isExpanded, onToggle }: Props) => {
-  const imageMaxClass =
-    study.imageAspect === "portrait"
-      ? "max-w-[260px]"
-      : study.imageAspect === "square"
-      ? "max-w-[360px]"
-      : "max-w-[560px]";
+const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
+  const isReversed = index % 2 === 1;
 
   return (
     <article className="relative">
@@ -33,25 +29,27 @@ const CaseStudyCard = ({ study, isExpanded, onToggle }: Props) => {
           ))}
         </div>
 
-        <p className="font-body text-muted-foreground leading-relaxed italic mb-4">
+        <p className="font-body text-muted-foreground leading-relaxed italic mb-6">
           {study.subtitle}
         </p>
 
-        <div className={`overflow-hidden rounded-xl mb-4 ${imageMaxClass}`}>
-          <img
-            src={study.image}
-            alt={study.title}
-            className="w-full h-auto object-contain"
-          />
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-1">
-            Scope of Ownership
-          </h4>
-          <p className="font-body text-sm text-muted-foreground leading-relaxed">
-            {study.scopeOfOwnership}
-          </p>
+        {/* Image + Scope side by side, alternating */}
+        <div className={`flex flex-col md:flex-row gap-8 mb-6 ${isReversed ? "md:flex-row-reverse" : ""}`}>
+          <div className="md:w-[60%] overflow-hidden rounded-xl">
+            <img
+              src={study.image}
+              alt={study.title}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="md:w-[40%] flex flex-col justify-center">
+            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">
+              Scope of Ownership
+            </h4>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              {study.scopeOfOwnership}
+            </p>
+          </div>
         </div>
 
         <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 mb-5">

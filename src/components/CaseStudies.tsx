@@ -16,7 +16,7 @@ const CaseStudies = () => {
         </h2>
 
         <div className="space-y-24">
-          {caseStudies.map((study) => (
+          {caseStudies.map((study, index) => (
             <CaseStudyCard
               key={study.id}
               study={study}
@@ -24,6 +24,7 @@ const CaseStudies = () => {
               onToggle={() =>
                 setExpandedId(expandedId === study.id ? null : study.id)
               }
+              index={index}
             />
           ))}
         </div>

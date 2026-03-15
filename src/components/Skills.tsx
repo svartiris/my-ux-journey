@@ -33,6 +33,14 @@ const languages = [
   { name: "Russian", level: "Basic" },
 ];
 
+const certificates = [
+  { name: "UX Professional", issuer: "Baymard" },
+  { name: "Product Analytics", issuer: "Witflow" },
+  { name: "UX Strategy Fundamentals", issuer: "Joe Natoli" },
+  { name: "Conducting Usability Testing", issuer: "Interaction Design Foundation" },
+  { name: "User Methods and Best Practices", issuer: "Interaction Design Foundation" },
+];
+
 const Skills = () => {
   return (
     <section id="skills" className="py-24 md:py-32 bg-card">
@@ -44,7 +52,7 @@ const Skills = () => {
           Skills & Methods
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <h3 className="font-display text-xl text-foreground mb-6">Research Methods</h3>
             <ul className="space-y-3">
@@ -67,6 +75,18 @@ const Skills = () => {
                 >
                   {tool}
                 </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-display text-xl text-foreground mb-6">Certificates</h3>
+            <div className="space-y-4">
+              {certificates.map((cert) => (
+                <div key={cert.name} className="font-body text-sm">
+                  <p className="text-foreground">{cert.name}</p>
+                  <p className="text-muted-foreground text-xs">{cert.issuer}</p>
+                </div>
               ))}
             </div>
           </div>
