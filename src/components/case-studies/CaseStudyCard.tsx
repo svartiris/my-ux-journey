@@ -38,13 +38,16 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
 
         {/* Image + Scope side by side, alternating */}
         <div className={`flex flex-col md:flex-row gap-8 mb-6 ${isReversed ? "md:flex-row-reverse" : ""}`}>
-          <div className="md:w-[60%] overflow-hidden rounded-xl">
+          <button
+            className="md:w-[60%] overflow-hidden rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => setShowLightbox(true)}
+          >
             <img
               src={study.image}
               alt={study.title}
               className="w-full h-auto object-contain"
             />
-          </div>
+          </button>
           <div className={`md:w-[40%] flex flex-col justify-center ${isReversed ? "md:text-right" : ""}`}>
             <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
               Scope of Ownership
