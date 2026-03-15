@@ -136,7 +136,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
         <h4 className="font-display text-lg text-primary mb-4">Outcome</h4>
         <div className="grid md:grid-cols-3 gap-6">
           <div>
-            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Key Insight</h5>
+            <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">Key Insight</h5>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">{study.keyInsight}</p>
           </div>
           <div>
