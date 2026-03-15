@@ -125,10 +125,15 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
-        label: "Seller Perspective",
+        label: "Seller Perspective Old Layout",
         images: [
-          { src: sellerOld, alt: "Old seller item page" },
-          { src: sellerNew, alt: "New seller item page with updated design" },
+          { src: sellerOld, alt: "Seller perspective old layout" },
+        ],
+      },
+      {
+        label: "Seller Perspective New Layout",
+        images: [
+          { src: sellerNew, alt: "Seller perspective new layout" },
         ],
       },
     ],
