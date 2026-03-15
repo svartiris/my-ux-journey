@@ -1,20 +1,5 @@
 const testimonials = [
   {
-    quote: "Melanie's research transformed how we approach our checkout flow. Her insights were directly responsible for a measurable lift in conversion.",
-    author: "Product Manager",
-    role: "E-Commerce Platform",
-  },
-  {
-    quote: "She has a rare ability to translate complex data into clear, actionable recommendations that the whole team can rally behind.",
-    author: "UX Design Lead",
-    role: "Digital Agency",
-  },
-  {
-    quote: "Working with Melanie meant our decisions were always grounded in real user needs. She brought structure and rigor to every project.",
-    author: "Head of Marketing",
-    role: "Tech Company",
-  },
-  {
     quote: "Współpraca z Melanie to dowód na to, jak ogromny wpływ na biznes potrafi mieć świetny UX Research. Melanie to profesjonalistka w każdym calu. Jej przenikliwość i analityczny umysł pozwalają jej dostrzegać niuanse w zachowaniach użytkowników, które inni łatwo przeoczają. Najbardziej imponująca w pracy Melanie jest jej umiejętność łączenia perspektywy użytkownika z celami firmy. Jej badania nigdy nie kończyły się na samej diagnozie problemu, zawsze dostarczała konkretne, wartościowe rekomendacje, których wdrożenie przynosiło nam wymierne korzyści biznesowe. Gorąco polecam Melanie każdej organizacji, która chce tworzyć lepsze produkty i usługi w oparciu o rzetelne dane.",
     author: "Maciej Rynarzewski",
     role: "Strategy Director at ZEN.COM",
