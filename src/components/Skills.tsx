@@ -63,10 +63,7 @@ const certificates: CertType[] = [
 ];
 
 const Skills = () => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxSrc, setLightboxSrc] = useState("");
-  const [lightboxAlt, setLightboxAlt] = useState("");
-
+  const [lightboxSrc, setLightboxSrc] = useState<string | string[]>("");
   const openCert = (cert: CertType) => {
     if (cert.image) {
       setLightboxSrc(cert.image);
