@@ -15,17 +15,18 @@ const CaseStudies = () => {
           Case Studies
         </h2>
 
-        <div className="space-y-24">
+        <div className="divide-y divide-border/40">
           {caseStudies.map((study, index) => (
-            <CaseStudyCard
-              key={study.id}
-              study={study}
-              isExpanded={expandedId === study.id}
-              onToggle={() =>
-                setExpandedId(expandedId === study.id ? null : study.id)
-              }
-              index={index}
-            />
+            <div key={study.id} className="py-16 md:py-20 first:pt-0">
+              <CaseStudyCard
+                study={study}
+                isExpanded={expandedId === study.id}
+                onToggle={() =>
+                  setExpandedId(expandedId === study.id ? null : study.id)
+                }
+                index={index}
+              />
+            </div>
           ))}
         </div>
       </div>
