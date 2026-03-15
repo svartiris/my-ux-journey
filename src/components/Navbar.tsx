@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Resume", href: "/Melanie_Gierszal_Resume.pdf", external: true },
   { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
@@ -12,13 +13,10 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const fold = window.innerHeight;
-      setVisible(window.scrollY > fold);
-      setScrolled(window.scrollY > fold + 50);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,9 +25,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        !visible ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-      } ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-background/80 backdrop-blur-sm"
+        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
@@ -42,6 +38,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {link.label}
@@ -65,6 +62,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 onClick={() => setMobileOpen(false)}
                 className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
