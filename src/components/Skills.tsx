@@ -54,7 +54,7 @@ type CertType = {
 
 const certificates: CertType[] = [
   { name: "UX Professional", issuer: "Baymard", image: certBaymard },
-  { name: "Product Analytics", issuer: "Witflow", image: certProductAnalytics },
+  { name: "Product Analytics", issuer: "Witflow", image: [certProductAnalytics1, certProductAnalytics2] },
   { name: "UX Strategy Fundamentals", issuer: "Joe Natoli", image: certUxStrategy },
   { name: "Conducting Usability Testing", issuer: "Interaction Design Foundation", image: certUsabilityTesting },
   { name: "User Methods and Best Practices", issuer: "Interaction Design Foundation", image: certUserMethods },
