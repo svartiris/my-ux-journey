@@ -5,7 +5,8 @@ import ImageLightbox from "./case-studies/ImageLightbox";
 import certBaymard from "@/assets/cert-baymard-ux-professional.png";
 import certUsabilityTesting from "@/assets/cert-conducting-usability-testing.jpeg";
 import certUserMethods from "@/assets/cert-user-methods.jpeg";
-import certProductAnalytics from "@/assets/cert-product-analytics.png";
+import certProductAnalytics1 from "@/assets/cert-product-analytics-1.png";
+import certProductAnalytics2 from "@/assets/cert-product-analytics-2.png";
 import certUxStrategy from "@/assets/cert-ux-strategy.png";
 
 const researchMethods = [
