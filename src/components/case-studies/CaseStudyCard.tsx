@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { CaseStudy } from "./caseStudyData";
 import CaseStudyExpanded from "./CaseStudyExpanded";
+import ImageLightbox from "./ImageLightbox";
 
 interface Props {
   study: CaseStudy;
