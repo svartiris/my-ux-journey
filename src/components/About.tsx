@@ -8,7 +8,8 @@ const About = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-card">
       <div className="container">
-        <div className="grid md:grid-cols-[1fr_auto] gap-16 items-start">
+        <div className="grid md:grid-cols-[1fr_auto_auto] gap-12 md:gap-16 items-start">
+          {/* Column 1: Heading + paragraphs */}
           <div>
             <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4">
               About
@@ -18,7 +19,7 @@ const About = () => {
               <br />
               <span className="text-primary italic">moves the needle</span>
             </h2>
-            <div className="space-y-5 font-body text-muted-foreground leading-relaxed mb-10">
+            <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
               <p>
                 I'm a curiosity-driven UX Researcher taking ownership and initiative.
               </p>
@@ -29,17 +30,19 @@ const About = () => {
                 I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.
               </p>
             </div>
-
-            <div className="flex flex-col gap-3 max-w-[200px]">
-              {stats.map((stat) => (
-                <div key={stat.label} className="p-5 rounded-xl bg-background border border-border text-center">
-                  <p className="font-display text-3xl text-accent mb-1">{stat.number}</p>
-                  <p className="font-body text-sm text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
+          {/* Column 2: Stats boxes */}
+          <div className="flex flex-col gap-3 md:pt-20">
+            {stats.map((stat) => (
+              <div key={stat.label} className="p-5 rounded-xl bg-background border border-border text-center min-w-[160px]">
+                <p className="font-display text-3xl text-accent mb-1">{stat.number}</p>
+                <p className="font-body text-sm text-muted-foreground">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Column 3: Degrees */}
           <div className="md:pt-20">
             <h3 className="font-display text-xl text-primary mb-4">Degrees</h3>
             <div className="space-y-5">
