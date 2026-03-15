@@ -47,7 +47,7 @@ const languages = [
 type CertType = {
   name: string;
   issuer: string;
-  image?: string;
+  image?: string | string[];
   pdf?: string;
   inProgress?: boolean;
 };
