@@ -75,6 +75,13 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
 
       {isExpanded && <CaseStudyExpanded study={study} />}
 
+      <ImageLightbox
+        src={study.image}
+        alt={study.title}
+        open={showLightbox}
+        onOpenChange={setShowLightbox}
+      />
+
       {/* Print-only */}
       <div className="hidden print:block mt-6 space-y-4 text-sm">
         <div>
