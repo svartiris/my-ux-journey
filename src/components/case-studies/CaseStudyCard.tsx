@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { CaseStudy } from "./caseStudyData";
 import CaseStudyExpanded from "./CaseStudyExpanded";
+import ImageLightbox from "./ImageLightbox";
 
 interface Props {
   study: CaseStudy;
@@ -10,6 +12,7 @@ interface Props {
 
 const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
   const isReversed = index % 2 === 1;
+  const [showLightbox, setShowLightbox] = useState(false);
 
   return (
     <article className="relative">
@@ -35,13 +38,16 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
 
         {/* Image + Scope side by side, alternating */}
         <div className={`flex flex-col md:flex-row gap-8 mb-6 ${isReversed ? "md:flex-row-reverse" : ""}`}>
-          <div className="md:w-[60%] overflow-hidden rounded-xl">
+          <button
+            className="md:w-[60%] overflow-hidden rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => setShowLightbox(true)}
+          >
             <img
               src={study.image}
               alt={study.title}
               className="w-full h-auto object-contain"
             />
-          </div>
+          </button>
           <div className={`md:w-[40%] flex flex-col justify-center ${isReversed ? "md:text-right" : ""}`}>
             <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
               Scope of Ownership
@@ -68,6 +74,13 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
       </div>
 
       {isExpanded && <CaseStudyExpanded study={study} />}
+
+      <ImageLightbox
+        src={study.image}
+        alt={study.title}
+        open={showLightbox}
+        onOpenChange={setShowLightbox}
+      />
 
       {/* Print-only */}
       <div className="hidden print:block mt-6 space-y-4 text-sm">
