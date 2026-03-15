@@ -17,9 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const fold = window.innerHeight;
-      setVisible(window.scrollY > fold);
-      setScrolled(window.scrollY > fold + 50);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
