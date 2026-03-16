@@ -13,26 +13,26 @@ const About = () => {
           About
         </p>
 
-        {/* Title above the grid */}
-        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-8">
-          Research that
-          <br />
-          <span className="text-primary italic">moves the needle</span>
-        </h2>
-
-        {/* 3-column grid: paragraph + stats + degrees at same height */}
+        {/* 3-column grid: title + stats + degrees at same height */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-8 md:gap-12 items-start">
-          {/* Column 1: Paragraphs */}
-          <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
-            <p>
-              I'm a curiosity-driven UX Researcher taking ownership and initiative.
-            </p>
-            <p>
-              The passion for asking users the right questions are rooted in my background in cognitive sciences, the ability to lead between the lines - in applied linguistic studies.
-            </p>
-            <p>
-              I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.
-            </p>
+          {/* Column 1: Title + Paragraphs */}
+          <div>
+            <h2 className="font-display text-3xl md:text-5xl text-foreground mb-8">
+              Research that
+              <br />
+              <span className="text-primary italic">moves the needle</span>
+            </h2>
+            <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
+              <p>
+                I'm a curiosity-driven UX Researcher taking ownership and initiative.
+              </p>
+              <p>
+                The passion for asking users the right questions are rooted in my background in cognitive sciences, the ability to lead between the lines - in applied linguistic studies.
+              </p>
+              <p>
+                I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.
+              </p>
+            </div>
           </div>
 
           {/* Column 2: Stats boxes */}
