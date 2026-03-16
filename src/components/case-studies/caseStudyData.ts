@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 3,
-    tags: ["User Surveys", "Data Analysis", "Strategic Reporting", "Segment Profiling", "Trend Analysis"],
+    tags: ["Strategic User Insights", "User Surveys", "Data Analysis", "Strategic Reporting", "Segment Profiling", "Trend Analysis"],
     title: "Yearly User Report",
     subtitle: "Created and led an annual user research report, synthesizing global survey data with internal analytics to inform business strategy.",
     impact: "Identified 3–4 key segments and behavioral shifts, guiding management, marketing, and product decisions.",
