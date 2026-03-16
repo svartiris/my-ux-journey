@@ -102,17 +102,13 @@ export const caseStudies: CaseStudy[] = [
       {
         label: "Old Checkout Layout Flow",
         images: [
-          { src: checkoutOld1, alt: "Old checkout – payment methods" },
-          { src: checkoutOld2, alt: "Old checkout – order details expanded" },
-          { src: checkoutOld3, alt: "Old checkout – payment confirmation with upsell" },
+          { src: checkoutOldCombined, alt: "Old checkout flow – payment methods, order details, and payment confirmation with upsell" },
         ],
       },
       {
         label: "New Checkout Layout Flow",
         images: [
-          { src: checkoutNew1, alt: "New checkout – fees included in price" },
-          { src: checkoutNew2, alt: "New checkout – order details expanded" },
-          { src: checkoutNew3, alt: "New checkout – streamlined payment" },
+          { src: checkoutNewCombined, alt: "New checkout flow – fees included, order details, and streamlined payment" },
         ],
       },
       {
