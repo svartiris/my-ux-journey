@@ -8,32 +8,35 @@ const About = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-card">
       <div className="container">
-        <div className="grid md:grid-cols-[1fr_auto_auto] gap-12 md:gap-16 items-start">
-          {/* Column 1: Heading + paragraphs */}
-          <div>
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4">
-              About
+        {/* "About" label */}
+        <p className="font-body text-sm tracking-[0.3em] uppercase text-primary mb-4">
+          About
+        </p>
+
+        {/* Title - always full width */}
+        <h2 className="font-display text-3xl md:text-5xl text-foreground mb-8">
+          Research that
+          <br />
+          <span className="text-primary italic">moves the needle</span>
+        </h2>
+
+        {/* 3-column grid: all start at same height after title */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-8 md:gap-12 items-start">
+          {/* Column 1: Paragraphs */}
+          <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
+            <p>
+              I'm a curiosity-driven UX Researcher taking ownership and initiative.
             </p>
-            <h2 className="font-display text-3xl md:text-5xl text-foreground mb-8">
-              Research that
-              <br />
-              <span className="text-primary italic">moves the needle</span>
-            </h2>
-            <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
-              <p>
-                I'm a curiosity-driven UX Researcher taking ownership and initiative.
-              </p>
-              <p>
-                The passion for asking users the right questions are rooted in my background in cognitive sciences, the ability to lead between the lines - in applied linguistic studies.
-              </p>
-              <p>
-                I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.
-              </p>
-            </div>
+            <p>
+              The passion for asking users the right questions are rooted in my background in cognitive sciences, the ability to lead between the lines - in applied linguistic studies.
+            </p>
+            <p>
+              I thrive when leading cross-functional projects that balance user needs with business goals, turning research into revenue.
+            </p>
           </div>
 
           {/* Column 2: Stats boxes */}
-          <div className="flex flex-col gap-3 md:pt-20">
+          <div className="flex flex-col gap-3">
             {stats.map((stat) => (
               <div key={stat.label} className="p-5 rounded-xl bg-background border border-border text-center min-w-[160px]">
                 <p className="font-display text-3xl text-accent mb-1">{stat.number}</p>
@@ -43,7 +46,7 @@ const About = () => {
           </div>
 
           {/* Column 3: Degrees */}
-          <div className="md:pt-20">
+          <div>
             <h3 className="font-display text-xl text-primary mb-4">Degrees</h3>
             <div className="space-y-5">
               <div className="font-body text-sm">
