@@ -105,11 +105,7 @@ const Skills = () => {
               {tools.map((tool, i) => (
                 <span
                   key={tool}
-                  className={`font-body text-xs px-2.5 py-1 rounded-full ${
-                    i % 2 === 0
-                      ? "bg-accent/15 text-accent"
-                      : "bg-muted text-muted-foreground"
-                  }`}
+                  className="font-body text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground"
                 >
                   {tool}
                 </span>
