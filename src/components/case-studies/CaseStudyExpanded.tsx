@@ -85,17 +85,17 @@ const CaseStudyExpanded = ({ study }: Props) => {
           {(study.image || hasScreens || hasOtherImages) && (
             <div>
               <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-3">Screens</h5>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {study.image && (
                   <div className="space-y-1">
                     <button
                       onClick={() => setLightboxImage({ src: study.image, alt: study.title })}
-                      className="overflow-hidden rounded-lg border border-border cursor-pointer hover:border-primary/40 transition-colors w-full aspect-[4/3]"
+                      className="overflow-hidden rounded-lg border border-border cursor-pointer hover:border-primary/40 transition-colors w-full"
                     >
                       <img
                         src={study.image}
                         alt={study.title}
-                        className="w-full h-full object-cover bg-background"
+                        className="w-full h-auto object-contain bg-background"
                       />
                     </button>
                     <p className="font-body text-[10px] text-muted-foreground leading-tight">{study.title}</p>
