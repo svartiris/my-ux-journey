@@ -21,13 +21,17 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           {study.title}
         </h3>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mb-5">
-          {study.tags.map((tag) => (
+        <div className="flex flex-wrap gap-2 mb-5">
+          {study.tags.map((tag, i) => (
             <span
               key={tag}
-              className="font-body text-xs text-accent/80 italic"
+              className={`font-body text-xs px-2.5 py-1 rounded-full ${
+                i % 2 === 0
+                  ? "bg-accent/15 text-accent"
+                  : "bg-muted text-muted-foreground"
+              }`}
             >
-              #{tag}
+              {tag}
             </span>
           ))}
         </div>
@@ -38,7 +42,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
 
         {/* Case study 1 (no image): scope (no box) + impact side by side */}
         {study.id === 1 ? (
-          <div className="grid md:grid-cols-[3fr_2fr] gap-6 mb-6 items-start">
+          <div className="grid md:grid-cols-[5fr_2fr] gap-6 mb-6 items-start">
             <div className="flex flex-col">
               <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
                 Scope of Ownership

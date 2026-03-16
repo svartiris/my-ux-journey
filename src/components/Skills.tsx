@@ -102,10 +102,14 @@ const Skills = () => {
           <div>
             <h3 className="font-display text-xl text-primary mb-6">Tools</h3>
             <div className="flex flex-wrap gap-2">
-              {tools.map((tool) => (
+              {tools.map((tool, i) => (
                 <span
                   key={tool}
-                  className="font-body text-xs px-3 py-2 rounded-lg bg-background border border-border text-foreground"
+                  className={`font-body text-xs px-2.5 py-1 rounded-full ${
+                    i % 2 === 0
+                      ? "bg-accent/15 text-accent"
+                      : "bg-muted text-muted-foreground"
+                  }`}
                 >
                   {tool}
                 </span>

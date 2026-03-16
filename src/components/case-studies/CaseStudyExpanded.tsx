@@ -82,11 +82,26 @@ const CaseStudyExpanded = ({ study }: Props) => {
           </div>
 
           {/* Screens inside Research Process */}
-          {hasScreens && (
+          {(study.image || hasScreens || hasOtherImages) && (
             <div>
               <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-3">Screens</h5>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {screensGroup.map((group) =>
+                {study.image && (
+                  <div className="space-y-1">
+                    <button
+                      onClick={() => setLightboxImage({ src: study.image, alt: study.title })}
+                      className="overflow-hidden rounded-lg border border-border cursor-pointer hover:border-primary/40 transition-colors w-full aspect-[4/3]"
+                    >
+                      <img
+                        src={study.image}
+                        alt={study.title}
+                        className="w-full h-full object-cover bg-background"
+                      />
+                    </button>
+                    <p className="font-body text-[10px] text-muted-foreground leading-tight">{study.title}</p>
+                  </div>
+                )}
+                {screensGroup?.map((group) =>
                   group.images.map((img) => (
                     <div key={img.alt} className="space-y-1">
                       <button
@@ -103,16 +118,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
                     </div>
                   ))
                 )}
-              </div>
-            </div>
-          )}
-
-          {/* Other detail images */}
-          {hasOtherImages && (
-            <div>
-              <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-3">Artifacts</h5>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {otherDetailImages.map((group) =>
+                {otherDetailImages?.map((group) =>
                   group.images.map((img) => (
                     <div key={img.alt} className="space-y-1">
                       <button
