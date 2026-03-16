@@ -36,18 +36,18 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           {study.subtitle}
         </p>
 
-        {/* Case study 1 (no image): scope + impact side by side, equal height */}
+        {/* Case study 1 (no image): scope (no box) + impact side by side */}
         {study.id === 1 ? (
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="p-4 rounded-lg bg-background border border-border flex flex-col">
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 mb-6 items-start">
+            <div className="flex flex-col">
               <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
                 Scope of Ownership
               </h4>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 {study.scopeOfOwnership}
               </p>
             </div>
-            <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex flex-col">
+            <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex flex-col h-full">
               <p className="font-body text-sm flex-1">
                 <span className="font-medium text-primary">Impact: </span>
                 <span className="text-foreground">{study.impact}</span>
