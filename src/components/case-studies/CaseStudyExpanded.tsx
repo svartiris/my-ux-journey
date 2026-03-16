@@ -123,12 +123,12 @@ const CaseStudyExpanded = ({ study }: Props) => {
                     <div key={img.alt} className="space-y-1">
                       <button
                         onClick={() => setLightboxImage(img)}
-                        className="overflow-hidden rounded-lg border border-border cursor-pointer hover:border-primary/40 transition-colors w-full aspect-[4/3]"
+                        className="overflow-hidden rounded-lg border border-border cursor-pointer hover:border-primary/40 transition-colors w-full"
                       >
                         <img
                           src={img.src}
                           alt={img.alt}
-                          className="w-full h-full object-cover bg-background"
+                          className="w-full h-auto object-contain bg-background"
                         />
                       </button>
                       <p className="font-body text-[10px] text-muted-foreground leading-tight">{img.alt}</p>
