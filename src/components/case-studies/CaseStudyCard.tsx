@@ -21,13 +21,17 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
           {study.title}
         </h3>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-0.5 mb-5">
-          {study.tags.map((tag) => (
+        <div className="flex flex-wrap gap-2 mb-5">
+          {study.tags.map((tag, i) => (
             <span
               key={tag}
-              className="font-body text-xs text-accent/80 italic"
+              className={`font-body text-xs px-2.5 py-1 rounded-full ${
+                i % 2 === 0
+                  ? "bg-accent/15 text-accent"
+                  : "bg-muted text-muted-foreground"
+              }`}
             >
-              #{tag}
+              {tag}
             </span>
           ))}
         </div>

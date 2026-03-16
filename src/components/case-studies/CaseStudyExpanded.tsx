@@ -110,7 +110,7 @@ const CaseStudyExpanded = ({ study }: Props) => {
           {/* Other detail images */}
           {hasOtherImages && (
             <div>
-              <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-3">Artifacts</h5>
+              <h5 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-3">Screens</h5>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                 {otherDetailImages.map((group) =>
                   group.images.map((img) => (
