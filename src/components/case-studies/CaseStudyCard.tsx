@@ -47,7 +47,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
                 {study.scopeOfOwnership}
               </p>
             </div>
-            <div className="p-4 rounded-lg bg-primary/5 border border-primary/10 flex flex-col h-full">
+            <div className="p-4 rounded-lg bg-primary/5 border border-primary/10">
               <p className="font-body text-sm flex-1">
                 <span className="font-medium text-primary">Impact: </span>
                 <span className="text-foreground">{study.impact}</span>
