@@ -52,7 +52,7 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    tags: ["Conversion Optimization", "A/B Testing", "Team Leadership", "Design Thinking Workshops", "Hypothesis Prioritization"],
+    tags: ["Cross-functional Leadership", "Conversion Optimization", "A/B Testing", "Team Leadership", "Design Thinking Workshops", "Hypothesis Prioritization"],
     title: "Leading Conversion Optimisation Team",
     subtitle: "Established and led a structured conversion optimization practice as UX Lead Researcher, transforming stakeholder ideas into a pipeline of 92 research-driven experiments over 2 years.",
     impact: "Delivered measurable KPI lifts (e.g., +2% baskets, +0.5% checkout conversion) across key journeys.",
@@ -79,7 +79,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    tags: ["Multivariate Testing", "A/B Testing", "Data Analysis", "Research Project Management", "Financial Reporting", "Cross-Functional Leadership", "Checkout Optimization"],
+    tags: ["High-risk Data Analysis", "Multivariate Testing", "A/B Testing", "Research Project Management", "Financial Reporting", "Cross-Functional Leadership", "Checkout Optimization"],
     title: "Order Fee Optimization",
     subtitle: "Led end-to-end multivariate tests to refine the checkout financial model, optimizing order fee amounts, visuals, and flow.",
     impact: "Increased conversion rate by 1 percentage point, supporting revenue growth while preserving margins.",
@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 3,
-    tags: ["User Surveys", "Data Analysis", "Strategic Reporting", "Segment Profiling", "Trend Analysis"],
+    tags: ["Strategic User Insights", "User Surveys", "Data Analysis", "Strategic Reporting", "Segment Profiling", "Trend Analysis"],
     title: "Yearly User Report",
     subtitle: "Created and led an annual user research report, synthesizing global survey data with internal analytics to inform business strategy.",
     impact: "Identified 3–4 key segments and behavioral shifts, guiding management, marketing, and product decisions.",
@@ -184,7 +184,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 4,
-    tags: ["A/B Test", "Checkout Optimization"],
+    tags: ["Funnel Optimization", "A/B Test", "Checkout Optimization"],
     title: "Shorter Checkout",
     subtitle: "Directed end-to-end A/B test as sole UX Researcher to eliminate a redundant checkout step, reducing drop-off.",
     impact: "Increased cart conversion rate by 5 percentage points, enhancing purchase completion and revenue.",
@@ -245,7 +245,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 6,
-    tags: ["Moderated Usability Test", "Quick and Dirty", "Mobile", "Risk Mitigation", "Last-Minute Validation", "Qualitative Insights"],
+    tags: ["Quick and Dirty", "Moderated Usability Test", "Mobile", "Risk Mitigation", "Last-Minute Validation", "Qualitative Insights"],
     title: "Mobile App Purchase Flow",
     subtitle: "Led rapid moderated usability tests to validate redesigned purchase flow and onboarding, preventing a flawed launch.",
     impact: "Blocked confusing onboarding rollout, averting potential 20-30% drop in new user retention and trust erosion (based on industry benchmarks).",
