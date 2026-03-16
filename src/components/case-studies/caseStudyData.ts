@@ -184,7 +184,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 4,
-    tags: ["A/B Test", "Checkout Optimization"],
+    tags: ["Funnel Optimization", "A/B Test", "Checkout Optimization"],
     title: "Shorter Checkout",
     subtitle: "Directed end-to-end A/B test as sole UX Researcher to eliminate a redundant checkout step, reducing drop-off.",
     impact: "Increased cart conversion rate by 5 percentage points, enhancing purchase completion and revenue.",
