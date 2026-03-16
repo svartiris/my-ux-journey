@@ -245,7 +245,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 6,
-    tags: ["Moderated Usability Test", "Quick and Dirty", "Mobile", "Risk Mitigation", "Last-Minute Validation", "Qualitative Insights"],
+    tags: ["Quick and Dirty", "Moderated Usability Test", "Mobile", "Risk Mitigation", "Last-Minute Validation", "Qualitative Insights"],
     title: "Mobile App Purchase Flow",
     subtitle: "Led rapid moderated usability tests to validate redesigned purchase flow and onboarding, preventing a flawed launch.",
     impact: "Blocked confusing onboarding rollout, averting potential 20-30% drop in new user retention and trust erosion (based on industry benchmarks).",
