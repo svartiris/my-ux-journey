@@ -58,8 +58,6 @@ const certificates: CertType[] = [
   { name: "UX Strategy Fundamentals", issuer: "Joe Natoli", image: certUxStrategy },
   { name: "Conducting Usability Testing", issuer: "Interaction Design Foundation", image: certUsabilityTesting },
   { name: "User Methods and Best Practices", issuer: "Interaction Design Foundation", image: certUserMethods },
-  { name: "Master Design Thinking", issuer: "Julia Lettinger", inProgress: true },
-  { name: "PSPO1", issuer: "Scrum.org", inProgress: true },
 ];
 
 const Skills = () => {
