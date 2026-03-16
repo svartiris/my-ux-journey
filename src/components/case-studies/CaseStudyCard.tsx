@@ -38,7 +38,7 @@ const CaseStudyCard = ({ study, isExpanded, onToggle, index }: Props) => {
 
         {/* Case study 1 (no image): scope (no box) + impact side by side */}
         {study.id === 1 ? (
-          <div className="grid md:grid-cols-[3fr_2fr] gap-6 mb-6 items-start">
+          <div className="grid md:grid-cols-[5fr_2fr] gap-6 mb-6 items-start">
             <div className="flex flex-col">
               <h4 className="font-body text-xs tracking-[0.15em] uppercase text-accent font-medium mb-2">
                 Scope of Ownership
