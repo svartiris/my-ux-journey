@@ -4,8 +4,12 @@ import caseStudyReport from "@/assets/case-study-user-report-map.png";
 import userReportToc1 from "@/assets/user-report-toc-1.png";
 import userReportToc2 from "@/assets/user-report-toc-2.png";
 import caseStudyConversion from "@/assets/case-study-conversion.jpg";
-import checkoutOldCombined from "@/assets/checkout-old-combined.png";
-import checkoutNewCombined from "@/assets/checkout-new-combined.png";
+import checkoutOld1 from "@/assets/checkout-old-1.png";
+import checkoutOld2 from "@/assets/checkout-old-2.png";
+import checkoutOld3 from "@/assets/checkout-old-3.png";
+import checkoutNew1 from "@/assets/checkout-new-1.png";
+import checkoutNew2 from "@/assets/checkout-new-2.png";
+import checkoutNew3 from "@/assets/checkout-new-3.png";
 import testGroupsTable from "@/assets/test-groups-table.png";
 import hypothesisMetrics from "@/assets/hypothesis-metrics.png";
 import sellerOld from "@/assets/seller-old.jpg";
@@ -102,13 +106,17 @@ export const caseStudies: CaseStudy[] = [
       {
         label: "Old Checkout Layout Flow",
         images: [
-          { src: checkoutOldCombined, alt: "Old checkout flow – payment methods, order details, and payment confirmation with upsell" },
+          { src: checkoutOld1, alt: "Old checkout flow step 1" },
+          { src: checkoutOld2, alt: "Old checkout flow step 2" },
+          { src: checkoutOld3, alt: "Old checkout flow step 3" },
         ],
       },
       {
         label: "New Checkout Layout Flow",
         images: [
-          { src: checkoutNewCombined, alt: "New checkout flow – fees included, order details, and streamlined payment" },
+          { src: checkoutNew1, alt: "New checkout flow step 1" },
+          { src: checkoutNew2, alt: "New checkout flow step 2" },
+          { src: checkoutNew3, alt: "New checkout flow step 3" },
         ],
       },
       {
